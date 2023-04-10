@@ -10,7 +10,7 @@
 ############################
 
 # Name of website
-title: Mubashir Abbas Website
+title: Mubashir Abbas
 
 # Your name to show in the footer
 author: Some Person
@@ -20,7 +20,7 @@ author: Some Person
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
+  About Me: "Hi, I am Mubashir Abbas"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
@@ -52,7 +52,7 @@ social-network-links:
   email: "mubashirabbas3164@yahoo.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
 #  facebook: Mubashir Abbas
-  github: Mubashir Abbas
+  github: Mubashir3164.github
   twitter: MAbbas8822992
 #  patreon: DeanAttali
 #  youtube: c/daattali
