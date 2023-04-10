@@ -51,11 +51,11 @@ round-avatar: true
 social-network-links:
   email: "mubashirabbas3164@yahoo.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: Mubashir Abbas
+#  facebook: Mubashir Abbas
   github: Mubashir Abbas
   twitter: MAbbas8822992
-  patreon: DeanAttali
-  youtube: c/daattali
+#  patreon: DeanAttali
+#  youtube: c/daattali
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
