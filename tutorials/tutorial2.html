@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extract Matching Data from Two Files</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 3px solid #ccc;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Extract Matching Data from Two Files Using Python</h1>
+    <p>This tutorial explains how to use Python and the <code>pandas</code> library to extract matching data from two files.</p>
+
+    <h2>Step 1: Import Necessary Libraries</h2>
+    <pre><code>import pandas as pd</code></pre>
+
+    <h2>Step 2: Read Input Files</h2>
+    <p>Load the data from your files using <code>pandas.read_csv()</code>. Assume the files are tab-separated (TSV) and encoded in Latin-1.</p>
+    <pre><code># Reading the first file
+df1 = pd.read_csv('File1.txt', sep='\t', encoding='latin1')
+
+# Reading the second file
+df2 = pd.read_csv('File2.txt', sep='\t', encoding='latin1')</code></pre>
+
+    <h2>Step 3: Extract Matching Data</h2>
+    <p>Filter rows in <code>df2</code> where values in the <code>column1</code> match the values in <code>column1</code> of <code>df1</code>.</p>
+    <pre><code># Extracting matching data
+matching_data = df2[df2['column1'].isin(df1['column1'])]</code></pre>
+
+    <h2>Step 4: Save the Extracted Data</h2>
+    <p>Save the matching data to a new file.</p>
+    <pre><code># Saving the extracted data
+matching_data.to_csv('extracted_data.txt', sep='\t', index=False)</code></pre>
+
+    <h2>Example</h2>
+    <p>Here is an example using species data:</p>
+
+    <h3>Input Files</h3>
+    <p><strong>File1.txt</strong> (list of species to extract):</p>
+    <pre><code>Specie
+Species_A
+Species_C</code></pre>
+
+    <p><strong>File2.txt</strong> (data with species and codes):</p>
+    <pre><code>Specie     Code
+Species_A  ABC123
+Species_B  DEF456
+Species_C  GHI789</code></pre>
+
+    <h3>Extracted Data</h3>
+    <p>The script will produce a file named <strong>extracted_data.txt</strong> with the following content:</p>
+    <pre><code>Specie      Code
+Species_A   ABC123
+Species_C   GHI789</code></pre>
+
+    <h2>Usage Notes</h2>
+    <ol>
+        <li>Ensure your input files are in the correct format (e.g., TSV or CSV).</li>
+        <li>Adjust the column names and encoding as necessary to match your data.</li>
+        <li>Verify that the column names in both files are consistent.</li>
+    </ol>
+
+    <h2>Summary</h2>
+    <p>Using <code>pandas</code>, this script efficiently matches data between two files and saves the result in a new file. Adjust the file names, column names, and formats to suit your dataset.</p>
+</body>
+</html>
+
