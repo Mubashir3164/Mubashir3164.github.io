@@ -1,35 +1,131 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
 }
 
+/* Header Styles */
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
-h1 {
-    font-size: 2.5em;
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
 }
 
+header p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Main Section Styles */
 main {
     padding: 20px;
 }
 
+/* Section Styles */
 section {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* About Section */
+.about h2 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.about ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+/* Project Section */
+.projects h2 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.project-links a {
+    display: block;
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.project-links a:hover {
+    color: #333;
+    transform: scale(1.05);
+}
+
+/* Tutorials Section */
+.tutorials h2 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.tutorial-links a {
+    display: block;
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.tutorial-links a:hover {
+    color: #333;
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 15px 0;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+    
+    header p {
+        font-size: 1em;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .project-links a, .tutorial-links a {
+        font-size: 1.1em;
+    }
 }
 
