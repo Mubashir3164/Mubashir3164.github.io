@@ -3,24 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Portfolio</title>
+    <title>Mubashir Abbas | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for better typography -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#research-articles">Publications</a></li>
+            <li><a href="#tutorials">Tutorials</a></li>
+        </ul>
+    </nav>
+
     <header>
         <div class="header-container">
-            <h1>Welcome to My GitHub Portfolio</h1>
-            <p>Explore my tutorials and bioinformatics projects!</p>
+            <h1>Welcome to My Research Portfolio</h1>
+            <p>Explore my research, publications, and tutorials in bioinformatics and molecular biology.</p>
         </div>
     </header>
     
     <main>
-        <!-- About Me Section -->
-        <section class="about">
+        <!-- Introduction Section -->
+        <section id="introduction" class="about">
             <h2>About Me</h2>
-            <p>I am Mubashir Abbas, a PhD graduate in Molecular Biology and Biochemistry, and currently a Postdoctoral Fellow. My research expertise spans computational and experimental biology.</p>
+            <p>I am Mubashir Abbas, a PhD graduate in Molecular Biology and Biochemistry, currently a Postdoctoral Fellow. My research expertise spans computational and experimental biology.</p>
             <h3>Key Expertise:</h3>
             <ul>
                 <li>NGS Data Analysis: Variant calling, genome assembly, transcriptomics</li>
@@ -29,32 +37,30 @@
                 <li>Bioinformatics Tools: Linux, Python, R for high-throughput data analysis</li>
             </ul>
         </section>
-
-        <!-- Research Article Section -->
-        <section class="research-article">
-            <h2>Representative Published Work</h2>
-            <h3>Insights into Genetic Diversity and Functional Significance of the bHLH Genes in Cotton Fiber Development</h3>
-            <p><strong>Abstract:</strong> This study investigated the identification and distribution of single nucleotide polymorphisms (SNPs) within basic Helix-Loop-Helix (bHLH) transcription factors (TFs) across diverse cotton (Gossypium hirsutum) accessions...</p>
-            <!-- Add the graphical abstract as an image -->
-            <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0926669024007404-ga1_lrg.jpg" alt="Graphical Abstract of the Research Article" class="research-image">
-            <p>For more details, you can read the full article on <a href="https://www.sciencedirect.com/science/article/pii/S0926669024007404" target="_blank">ScienceDirect</a>.</p>
-        </section>
-
-        <!-- Tutorials Section -->
-        <section class="tutorials">
-            <h2>Tutorials</h2>
-            <div class="tutorial-links">
-                <a href="tutorials/tutorial1.html" target="_blank">Bioinformatics Tutorial 1</a>
-                <a href="tutorials/tutorial2.html" target="_blank">Bioinformatics Tutorial 2</a>
-                <a href="tutorials/tutorial3.html" target="_blank">Variant Annotation Pipeline Tutorial</a>
-            </div>
+        
+        <!-- Research Articles Section -->
+        <section id="research-articles" class="research">
+            <h2>Publications</h2>
+            <ul>
+                <li>Abbas M, Abid M.A, Meng Z, et al. (2022). Integrating advancements in root phenotyping and genome-wide association studies to open the root genetics gateway. <i>Physiologia Plantarum</i>.</li>
+                <li>Abbas M, Zang Youyi, Chao Lu, et al. (2024). Insights into genetic diversity and functional significance of the bHLH genes in cotton fiber development. <i>Industrial Crops and Products</i>.</li>
+                <li>Abbas M, Muhammad Jawad Umer, Mengying Yang, et al. A short-chain dehydrogenase/reductase gene mediates Verticillium dahliae resistance in cotton. (Under consideration <i>The Plant Journal</i>).</li>
+                <li>Qiankun Liu, Pengtao Li, Muhammad Jawad Umer, et al. Identification of EXPA4 as a key gene in cotton salt stress adaptation. <i>BMC Plant Biology</i>.</li>
+                <li>Peilin Wang, Yuanchun Pu, Abbas M, et al. Genome-wide identification and analyses of cotton high-affinity nitrate transporter 2 (NRT2) family genes. <i>Frontiers in Plant Science</i>.</li>
+                <li>Peilin Wang, Mubashir Abbas, et al. Advances in Genome Sequencing and Artificially Induced Mutation for Cotton Breeding. <i>Frontiers in Plant Science</i>.</li>
+                <li>Aamir Ali Abro, Muhammad Qasim, Abbas M, et al. Integrating physiological and molecular insights in cotton under cold stress. <i>Genetic Resources and Crop Evolution</i>.</li>
+                <li>Muhammad Aamir Khan, Saeed Ahmad, Mubashir Abbas, et al. Impacts of Climate Change on Cotton Production. <i>Journal of Cotton Research</i>.</li>
+                <li>Muhammad Ali Abid, Qi Zhou, Abbas M, et al. Natural variation in Beauty Mark associated with UV-based geographical adaptation in Gossypium. <i>BMC Biology</i>.</li>
+                <li>Yulu Ye, Peilin Wang, Man Zhang, Abbas M, et al. High-throughput UAV-based phenotyping reveals genetic basis of plant height in cotton. <i>Plant Journal</i>.</li>
+                <li>Aamir Ali Abro, Muhammad Qasim, Muhammad Usama Younas, et al. Impact of elevated temperatures on genetic and physiological traits of cotton. <i>Genetic Resources and Crop Evolution</i>.</li>
+                <li>Manzar Abbas, Yan K, Li J, et al. Agri-Nanotechnology and Tree Nanobionics in Crop Yield and Biomass Accumulation. <i>Frontiers in Bioengineering and Biotechnology</i>.</li>
+                <li>Manzar Abbas, Li Y, Elbaiomy RG, et al. Genome-Wide Analysis and Expression Profiling of SlHsp70 Gene Family in Tomato. <i>Frontiers in Biosciences</i>.</li>
+                <li>Akram U, Song Y, Liang C, et al. Genome-Wide Characterization of NHX Gene Family under Salinity Stress in Gossypium. <i>Genes (Basel)</i>.</li>
+                <li>Myat AA, Zhou Y, Gao Y, et al. Overexpression of GhKTI12 Enhances Seed Yield in Nicotiana Tabacum. <i>Genes (Basel)</i>.</li>
+                <li>Lu C, Wei Y, Meng Z, et al. Overexpression of LT Promotes Somatic Embryogenesis in Cotton. <i>Genes (Basel)</i>.</li>
+            </ul>
         </section>
     </main>
-    
-    <!-- Footer Section -->
-    <footer>
-        <p>© 2025 Mubashir3164 | <a href="mailto:mubashirabbas3164@yahoo.com">Contact Me</a></p>
-    </footer>
 </body>
 </html>
 
