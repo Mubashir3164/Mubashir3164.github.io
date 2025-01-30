@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BWA Tutorial: Aligning Sequenced Reads to Reference Genome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BWA Tutorial: Aligning Sequenced Reads to Reference Genome</h1>
+    </header>
+    <main>
+        <h2>Overview</h2>
+        <p>BWA maps DNA sequences to a large reference genome, such as human or plant genomes. It includes algorithms like BWA-backtrack, BWA-SW, and BWA-MEM. BWA-backtrack is used for aligning Illumina reads of up to 100bp, while BWA-MEM and BWA-SW can handle longer reads, from 70bp to megabases.</p>
+
+        <h2>Download BWA and Picard Tools</h2>
+        <p>BWA and Picard tools can be downloaded from the following links:</p>
+        <ul>
+            <li><a href="https://sourceforge.net/projects/bio-bwa/files/">BWA Download</a></li>
+            <li><a href="https://github.com/lh3/bwa">BWA GitHub</a></li>
+            <li><a href="https://github.com/broadinstitute/picard/releases/tag/2.27.4">Picard Tools Download</a></li>
+        </ul>
+
+        <h2>Step 1: Create Directories</h2>
+        <p>Make the following directories to organize your files:</p>
+        <pre>
+mkdir Ref_genome  # for reference genome
+mkdir FastqFiles  # for raw fastq files
+mkdir BamFiles     # for output of BWA
+        </pre>
+
+        <h2>Step 2: Processing the Reference Genome</h2>
+        <p>Indexing the reference genome is required for BWA alignment. Run the following command:</p>
+        <pre>
+bwa index -p Ref_genome/your_ref.genome
+        </pre>
+        <p>This will generate several files in the <code>Ref_genome</code> directory.</p>
+
+        <h2>Step 3: Align Reads to Reference Genome</h2>
+        <p>If you have multiple paired-end reads, such as:</p>
+        <pre>
+SRR1.1.fastq.gz SRR1.2.fastq.gz
+SRR2.1.fastq.gz SRR2.2.fastq.gz
+        </pre>
+        <p>Run the following command for alignment:</p>
+        <pre>
+for INDEX in 1 2 3 4;
+do
+    bwa mem -M -t 8 -R "@RG\tID:COL_${INDEX}\tSM:COL_${INDEX}" Ref_genome/genome.Garb.CRI.fa \
+    FastqFiles/SRR${INDEX}.1.fastq.gz \
+    FastqFiles/SRR${INDEX}.2.fastq.gz \
+    > BamFiles/SRR${INDEX}.sam
+done
+        </pre>
+        <p><strong>Note:</strong> @RG refers to Read Groups, which are collections of reads from a single sequencing run. This information helps to differentiate between samples in your data.</p>
+
+        <h2>Step 4: Converting SAM to BAM</h2>
+        <p>To convert the generated SAM files to BAM format, run the following commands:</p>
+        <pre>
+for INDEX in {1..4};
+do
+    picard SortSam \
+    I=BamFiles/SRR${INDEX}.sam \
+    O=BamFiles/SRR${INDEX}.sorted.bam \
+    SORT_ORDER=coordinate \
+    CREATE_INDEX=true
+done
+        </pre>
+
+        <h2>Step 5: Create BAM Index</h2>
+        <p>Create an index for the BAM files to allow downstream programs to access their contents quickly:</p>
+        <pre>
+for INDEX in {1..4}
+do
+    picard BuildBamIndex \
+    I=BamFiles/SRR${INDEX}.sorted.bam
+done
+        </pre>
+
+        <h2>Reference</h2>
+        <p>For more information, refer to the original BWA paper:</p>
+        <p>Li H, Durbin R. <em>Fast and accurate short read alignment with Burrows-Wheeler transform.</em> Bioinformatics. 2009 Jul 15;25(14):1754-60. doi: 10.1093/bioinformatics/btp324. Epub 2009 May 18. PMID: 19451168; PMCID: PMC2705234.</p>
+    </main>
+</body>
+</html>
