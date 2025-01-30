@@ -1,131 +1,85 @@
-/* Global Styles */
+/* General Styling */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
 }
 
-/* Header Styles */
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 40px 20px;
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
     text-align: center;
-}
-
-header h1 {
-    font-size: 3em;
+    color: #0056b3;
+    font-size: 28px;
     margin-bottom: 10px;
 }
 
-header p {
-    font-size: 1.2em;
-    font-weight: 300;
+h2 {
+    color: #0275d8;
+    font-size: 22px;
+    border-bottom: 2px solid #0275d8;
+    padding-bottom: 5px;
+    margin-top: 20px;
 }
 
-/* Main Section Styles */
-main {
-    padding: 20px;
+/* Publications List */
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-/* Section Styles */
-section {
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: white;
+li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* About Section */
-.about h2 {
-    font-size: 2.5em;
-    color: #333;
+li:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.about ul {
-    padding-left: 20px;
-    list-style-type: disc;
-}
-
-/* Project Section */
-.projects h2 {
-    font-size: 2.5em;
-    color: #333;
-}
-
-.project-links a {
-    display: block;
-    color: #4CAF50;
+/* Links */
+a {
     text-decoration: none;
-    font-size: 1.2em;
-    padding: 8px;
-    margin-bottom: 10px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.project-links a:hover {
-    color: #333;
-    transform: scale(1.05);
-}
-
-/* Tutorials Section */
-.tutorials h2 {
-    font-size: 2.5em;
-    color: #333;
-}
-
-.tutorial-links a {
-    display: block;
-    color: #4CAF50;
-    text-decoration: none;
-    font-size: 1.2em;
-    padding: 8px;
-    margin-bottom: 10px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.tutorial-links a:hover {
-    color: #333;
-    transform: scale(1.05);
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-}
-
-footer a {
-    color: #4CAF50;
-    text-decoration: none;
+    color: #007bff;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
-footer a:hover {
-    color: white;
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 2.2em;
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
     }
     
-    header p {
-        font-size: 1em;
+    h1 {
+        font-size: 24px;
     }
-
-    section {
-        padding: 15px;
+    
+    h2 {
+        font-size: 20px;
     }
-
-    .project-links a, .tutorial-links a {
-        font-size: 1.1em;
+    
+    li {
+        padding: 12px;
     }
 }
 
