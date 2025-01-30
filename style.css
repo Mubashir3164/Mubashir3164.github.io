@@ -1,85 +1,156 @@
-/* General Styling */
+/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
 }
 
-.container {
-    max-width: 900px;
-    margin: 30px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 40px 20px;
     text-align: center;
-    color: #0056b3;
-    font-size: 28px;
+}
+
+header h1 {
+    font-size: 3em;
     margin-bottom: 10px;
 }
 
-h2 {
-    color: #0275d8;
-    font-size: 22px;
-    border-bottom: 2px solid #0275d8;
-    padding-bottom: 5px;
+header p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Navigation Styles */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
     margin-top: 20px;
 }
 
-/* Publications List */
-ul {
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section Styles */
+main {
+    padding: 20px;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+.about h2 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.about ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+/* Tutorials Section */
+.tutorials h2 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.tutorial-links a {
+    display: block;
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.tutorial-links a:hover {
+    color: #333;
+    transform: scale(1.05);
+}
+
+/* Publications Section */
+.publications h2 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.publications ul {
     list-style-type: none;
     padding: 0;
 }
 
-li {
-    background: #ffffff;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
+.publications li {
+    margin-bottom: 20px;
+    font-size: 1.2em;
 }
 
-li:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Links */
-a {
-    text-decoration: none;
-    color: #007bff;
+.publications strong {
     font-weight: bold;
-    transition: color 0.3s;
 }
 
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
+.publications em {
+    font-style: italic;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: white;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
     }
     
-    h1 {
-        font-size: 24px;
+    header p {
+        font-size: 1em;
     }
-    
-    h2 {
-        font-size: 20px;
+
+    section {
+        padding: 15px;
     }
-    
-    li {
-        padding: 12px;
+
+    .tutorial-links a, .publications li {
+        font-size: 1.1em;
     }
 }
 
