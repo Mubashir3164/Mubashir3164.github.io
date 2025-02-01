@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extracting Variants Using SnpSift - My GitHub Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Extracting Variants Using SnpSift</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../introduction.html">Introduction</a></li>
+                    <li><a href="../tutorials.html">Tutorials</a></li>
+                    <li><a href="../publications.html">Publications</a></li>
+                    <li><a href="../blogs.html">Blogs</a></li>
+                    <li><a href="../bioinformatics-news.html">Bioinformatics News</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="tutorial-content">
+            <h2>Extracting Variants Using SnpSift</h2>
+            <p>
+                In bioinformatics, it is often necessary to extract and analyze a subset of variants from a large dataset, such as variants in coding sequences (CDS), upstream, or downstream regions of a gene. This tutorial will guide you through the process of extracting variants using a BED file and <strong>SnpSift</strong>, a powerful tool for filtering and manipulating VCF files.
+            </p>
+
+            <h3>What is SnpSift?</h3>
+            <p>
+                <strong>SnpSift</strong> is a versatile tool designed to filter and manipulate VCF (Variant Call Format) files. It is part of the <strong>SnpEff</strong> suite and is particularly useful for extracting specific variants based on genomic regions defined in a BED file.
+            </p>
+            <p>
+                To learn more about SnpSift, visit the official documentation:
+                <a href="https://pcingola.github.io/SnpEff/ss_introduction/" target="_blank">SnpSift Introduction</a>.
+            </p>
+
+            <h3>Downloading SnpSift</h3>
+            <p>
+                You can download SnpSift from the official SnpEff website:
+                <a href="https://pcingola.github.io/SnpEff/download/" target="_blank">Download SnpSift</a>.
+            </p>
+
+            <h3>Preparing a BED File</h3>
+            <p>
+                A BED file is a tab-delimited text file that defines genomic regions. It typically contains three columns:
+            </p>
+            <ul>
+                <li><strong>Chromosome</strong>: The name of the chromosome (e.g., <code>chr1</code>).</li>
+                <li><strong>Start</strong>: The starting position of the region (0-based).</li>
+                <li><strong>End</strong>: The ending position of the region (1-based).</li>
+            </ul>
+            <p>
+                For example, to extract variants in the CDS region of a gene, create a BED file with the appropriate chromosome, start, and end positions. Ensure that the chromosome names in the BED file match those in your VCF file.
+            </p>
+            <p>
+                Learn more about the BED file format:
+                <a href="http://genome.ucsc.edu/FAQ/FAQformat" target="_blank">UCSC BED Format</a>.
+            </p>
+
+            <h3>Extracting Variants</h3>
+            <p>
+                Once you have prepared your BED file, use the following command to extract variants from your VCF file:
+            </p>
+            <pre><code>java -jar SnpSift.jar intidx large_data.vcf genes.bed > out.vcf</code></pre>
+            <p>
+                Here’s what each part of the command does:
+            </p>
+            <ul>
+                <li><code>java -jar SnpSift.jar intidx</code>: Runs SnpSift with the <code>intidx</code> command to intersect variants with the BED file.</li>
+                <li><code>large_data.vcf</code>: The input VCF file containing all variants.</li>
+                <li><code>genes.bed</code>: The BED file defining the regions of interest.</li>
+                <li><code>> out.vcf</code>: Redirects the output to a new VCF file named <code>out.vcf</code>.</li>
+            </ul>
+            <p>
+                The resulting <code>out.vcf</code> file will contain only the variants within the specified regions.
+            </p>
+
+            <h3>Example</h3>
+            <p>
+                Suppose you have a VCF file (<code>large_data.vcf</code>) and a BED file (<code>genes.bed</code>) with the following content:
+            </p>
+            <pre><code># genes.bed
+chr1    10000   15000
+chr2    20000   25000</code></pre>
+            <p>
+                Run the command:
+            </p>
+            <pre><code>java -jar SnpSift.jar intidx large_data.vcf genes.bed > out.vcf</code></pre>
+            <p>
+                The <code>out.vcf</code> file will contain variants located within the regions defined in <code>genes.bed</code>.
+            </p>
+
+            <h3>Reference</h3>
+            <p>
+                For more information, refer to the following publication:
+            </p>
+            <p>
+                <em>"Using Drosophila melanogaster as a model for genotoxic chemical mutational studies with a new program, SnpSift"</em>, Cingolani, P., et. al., <strong>Frontiers in Genetics</strong>, 3, 2012.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Mubashir3164 | <a href="mailto:mubashirabbas3164@yahoo.com">Contact Me</a></p>
+    </footer>
+</body>
+</html>
