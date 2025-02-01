@@ -1,156 +1,194 @@
-/* Global Styles */
+/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    line-height: 1.6;
     color: #333;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
 }
 
 /* Header Styles */
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 40px 20px;
+    background: linear-gradient(135deg, #007BFF, #00a8ff);
+    color: #fff;
+    padding: 2rem 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
     font-weight: 300;
 }
 
-/* Navigation Styles */
-header nav ul {
-    list-style-type: none;
+nav ul {
+    list-style: none;
     padding: 0;
-    margin-top: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
-header nav ul li {
+nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 
-header nav ul li a {
-    color: white;
-    font-size: 1.1em;
-    text-decoration: none;
+nav ul li a {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Main Section Styles */
+/* Main Content Styles */
 main {
-    padding: 20px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Section Styles */
 section {
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: white;
+    margin-bottom: 2.5rem;
+    background: #fff;
+    padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* About Section */
-.about h2 {
-    font-size: 2.5em;
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #007BFF;
+    font-weight: 600;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    background: #f1f1f1;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 5px;
+    font-size: 0.95rem;
     color: #333;
 }
 
-.about ul {
-    padding-left: 20px;
-    list-style-type: disc;
-}
-
-/* Tutorials Section */
-.tutorials h2 {
-    font-size: 2.5em;
-    color: #333;
+section ul li strong {
+    color: #007BFF;
 }
 
 .tutorial-links a {
     display: block;
-    color: #4CAF50;
-    text-decoration: none;
-    font-size: 1.2em;
-    padding: 8px;
-    margin-bottom: 10px;
-    transition: color 0.3s ease, transform 0.3s ease;
+    background: #007BFF;
+    color: #fff;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 .tutorial-links a:hover {
-    color: #333;
-    transform: scale(1.05);
-}
-
-/* Publications Section */
-.publications h2 {
-    font-size: 2.5em;
-    color: #333;
-}
-
-.publications ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.publications li {
-    margin-bottom: 20px;
-    font-size: 1.2em;
-}
-
-.publications strong {
-    font-weight: bold;
-}
-
-.publications em {
-    font-style: italic;
+    background-color: #0056b3;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 1.5rem;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }
 
 footer a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
+    color: #fff;
+    font-weight: 500;
 }
 
 footer a:hover {
-    color: white;
+    color: #007BFF;
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     header h1 {
-        font-size: 2.2em;
+        font-size: 2rem;
     }
-    
+
     header p {
-        font-size: 1em;
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.5rem;
+    }
+
+    main {
+        padding: 1rem;
     }
 
     section {
-        padding: 15px;
+        padding: 1rem;
     }
 
-    .tutorial-links a, .publications li {
-        font-size: 1.1em;
+    section h2 {
+        font-size: 1.75rem;
+    }
+
+    section h3 {
+        font-size: 1.25rem;
     }
 }
-

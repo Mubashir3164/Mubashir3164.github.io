@@ -1,0 +1,1000 @@
+ 1098  nano combine_vcfs_script.py
+ 1099  python combine_vcfs_script.py 
+ 1100  nano combine_vcfs_script.py
+ 1101  python combine_vcfs_script.py 
+ 1102  nano combine_vcfs_script.py
+ 1103  python combine_vcfs_script.py 
+ 1104  nano combine_vcfs_script.py
+ 1105  python combine_vcfs_script.py 
+ 1106  nano combine_vcfs_script.py
+ 1107  python combine_vcfs_script.py 
+ 1108  nano combine_vcfs_script.py
+ 1109  python combine_vcfs_script.py 
+ 1110  nano combine_vcfs_script.py
+ 1111  python combine_vcfs_script.sh
+ 1112  clear
+ 1113  ls
+ 1114  nano combine_vcfs_script.sh
+ 1115  chmod +x combine_vcfs_script.
+ 1116  ls
+ 1117  clear
+ 1118  ls
+ 1119  chmod +x combine_vcfs_script.sh 
+ 1120  clear
+ 1121  ls
+ 1122  bash combine_vcfs_script.sh
+ 1123  nano combine_vcfs_script.sh
+ 1124  bash combine_vcfs_script.sh
+ 1125  nano combine_vcfs_script.sh
+ 1126  bash combine_vcfs_script.sh
+ 1127  nano combine_vcfs_script.sh
+ 1128  bash combine_vcfs_script.sh
+ 1129  clear
+ 1130  nano combine_vcfs_script.sh
+ 1131  bash combine_vcfs_script.sh
+ 1132  nano combine_vcfs_script.sh
+ 1133  bash combine_vcfs_script.sh
+ 1134  nano combine_vcfs_script.sh
+ 1135  bash combine_vcfs_script.sh
+ 1136  nano combine_vcfs_script.sh
+ 1137  bash combine_vcfs_script.sh
+ 1138  nano combine_vcfs_script.sh
+ 1139  bash combine_vcfs_script.sh
+ 1140  nano combine_vcfs_script.sh
+ 1141  bash combine_vcfs_script.sh
+ 1142  nano combine_vcfs_script.sh
+ 1143  bash combine_vcfs_script.sh
+ 1144  nano combine_vcfs_script.sh
+ 1145  bash combine_vcfs_script.sh
+ 1146  nano combine_vcfs_script.sh
+ 1147  bash combine_vcfs_script.sh
+ 1148  nano combine_vcfs_script.sh
+ 1149  bash combine_vcfs_script.sh
+ 1150  clear
+ 1151  conda activate GWAS
+ 1152  minimap2
+ 1153  clear
+ 1154  ls
+ 1155  minimap2 -ax asm5 -t 4 --eqx TM_1.HAU.chr_A13.fa CRI12.chr_A13.fa samtools sort -O BAM - > TM1.CRI12.A13.bam
+ 1156  minimap2 -ax asm5 -t 4 --eqx TM_1.HAU.chr_A13.fa CRI12.chr_A13.fa  \samtools sort -o BAM - > TM1.CRI12.A13.bam
+ 1157  minimap2 -ax asm5 -t 4 --eqx TM_1.HAU.chr_A13.fa CRI12.chr_A13
+ 1158  samtools
+ 1159  clear
+ 1160  ls
+ 1161  minimap2 -ax asm5 -t 4 --eqx TM_1.HAU.chr_A13.fa CRI12.chr_A13.fa | samtools sort -o BAM - > TM1.CRI12.A13.bam
+ 1162  ls
+ 1163  minimap2 -ax asm5 -t 10 --eqx TM_1.HAU.chr_A13.fa NDM8.chr_A13.fa | samtools sort -o BAM - > TM1.NDM8.A13.bam
+ 1164  minimap2 -ax asm5 -t 10 --eqx TM_1.HAU.chr_A13.fa ZM24.chr_A13.fa | samtools sort -o BAM - > TM1.ZM24.A13.bam
+ 1165  minimap2 -ax asm5 -t 10 --eqx TM_1.HAU.chr_A13.fa ZZ2.chr_A13.fa | samtools sort -o BAM - > TM1.ZZ2.A13.bam
+ 1166  minimap2 -ax asm5 -t 10 --eqx CRI12.chr_A13.fa NDM8.chr_A13.fa | samtools sort -o BAM - > CRI12.NDM8.A13.bam
+ 1167  minimap2 -ax asm5 -t 10 --eqx CRI12.chr_A13.fa ZM24.chr_A13.fa | samtools sort -o BAM - > CRI12.ZM24.A13.bam
+ 1168  ls
+ 1169  minimap2 -ax asm5 -t 10 --eqx CRI12.chr_A13.fa ZZ2.chr_A13.fa | samtools sort -o BAM - > CRI12.ZZ2.A13.bam
+ 1170  minimap2 -ax asm5 -t 10 --eqx NDM8.chr_A13.fa ZM24.chr_A13.fa | samtools sort -o BAM - > NDM8.ZM24.A13.bam
+ 1171  minimap2 -ax asm5 -t 10 --eqx NDM8.chr_A13.fa ZZ2.chr_A13.fa | samtools sort -o BAM - > NDM8.ZZ2.A13.bam
+ 1172  ls
+ 1173  minimap2 -ax asm5 -t 10 --eqx ZM24.chr_A13.fa ZZ2.chr_A13.fa | samtools sort -o BAM - > ZM24.ZZ2.A13.bam
+ 1174  clear            
+ 1175  ls
+ 1176  samtools index CRI12.NDM8.A13.bam
+ 1177  samtools --version
+ 1178  samtools index CRI12.NDM8.A13.bam
+ 1179  samtools sort CRI12.NDM8.A13.bam -o CRI12.NDM8.A13.sorted.bam
+ 1180  minimap2 -ax asm5 -t 4 --eqx TM_1.HAU.chr_A13.fa CRI12.chr_A13.fa /samtools sort -O BAM - > TM1.CRI12.A13.bam
+ 1181  minimap2 -ax asm5 -t 4 --eqx TM_1.HAU.chr_A13.fa CRI12.chr_A13.fa | samtools sort -O BAM - > TM1.CRI12.A13.bam
+ 1182  ls
+ 1183  cd alignment_files/
+ 1184  ls
+ 1185  clear
+ 1186  ls
+ 1187  nano align_all.pairwise.combination.sh
+ 1188  chmod +x align_all.pairwise.combination.sh 
+ 1189  bash align_all.pairwise.combination.sh 
+ 1190  clear
+ 1191  ls
+ 1192  nano indexing.script.all.bams.sh
+ 1193  chmod +x indexing.script.all.bams.sh 
+ 1194  bash indexing.script.all.bams.sh 
+ 1195  nano run_syri_all.sh
+ 1196  chmod +x run_syri_all.sh 
+ 1197  bash run_syri_all.sh 
+ 1198  conda deactivate
+ 1199  conda env list
+ 1200  conda sryi_env
+ 1201  conda syri_env
+ 1202  clear
+ 1203  ls
+ 1204  conda syri_env
+ 1205  conda env list
+ 1206  conda activate syri_env
+ 1207  clear
+ 1208  ls
+ 1209  bash run_syri_all.sh 
+ 1210  clear
+ 1211  ls
+ 1212  nano ZZ2.chr_A13.fa 
+ 1213  nano ZM24.chr_A13.fa 
+ 1214  nano ZZ2.chr_A13.fa 
+ 1215  nano NDM8.chr_A13.fa 
+ 1216  nano TM_1.HAU.chr_A13.fa 
+ 1217  nano CRI12.chr_A13.fa 
+ 1218  nano ZZ2.chr_A13.fa 
+ 1219  conda deactivate
+ 1220  conda activate GWAS
+ 1221  nano ZZ2.ref.all.other.query.align.script.sh
+ 1222  chmod +x ZZ2.ref.all.other.query.align.script.sh 
+ 1223  bash ZZ2.ref.all.other.query.align.script.sh 
+ 1224  ls\
+ 1225  clear
+ 1226  ls\
+ 1227  clear
+ 1228  ls
+ 1229  bash run_syri_all.sh 
+ 1230  conda deactivate
+ 1231  clear
+ 1232  ls
+ 1233  conda activate syri_env
+ 1234  bash run_syri_all.sh 
+ 1235  clear
+ 1236  grep *out
+ 1237  ls
+ 1238  ls *.out
+ 1239  ls *.fa
+ 1240  conda deactivate
+ 1241  conda activate GWAS
+ 1242  plostr
+ 1243  plotsr
+ 1244  clear
+ 1245  ls
+ 1246  nano plotsr.plotting.script.py
+ 1247  chmod +x plotsr.plotting.script.py [B
+ 1248  ls
+ 1249  clear
+ 1250  ls
+ 1251  bash plotsr.plotting.script.sh 
+ 1252  nano plotsr.plotting.script.py
+ 1253  nano plotsr.plotting.script.sh 
+ 1254  bash plotsr.plotting.script.sh 
+ 1255  clear
+ 1256  ls
+ 1257  plotsr --sr CRI12_NDM8syri.out --sr NDM8_CRI12syri.out --sr ZM24_CRI12syri.out --sr ZZ2_CRI12syri.out --sr ZZ2_ZM24syri.out --sr CRI12_ZM24syri.out --sr NDM8_ZM24syri.out --sr  ZM24_NDM8syri.out --sr ZZ2_NDM8syri.out \ 
+ 1258  plotsr --sr CRI12_NDM8syri.out --sr NDM8_CRI12syri.out --sr ZM24_CRI12syri.out --sr ZZ2_CRI12syri.out --sr ZZ2_ZM24syri.out --sr CRI12_ZM24syri.out --sr NDM8_ZM24syri.out --sr  ZM24_NDM8syri.out --sr ZZ2_NDM8syri.out --genomes genomes.txt -o genomes_output_plot.png
+ 1259  clear
+ 1260  ls
+ 1261  nano plotsr.plotting.script.sh 
+ 1262  bash plotsr.plotting.script.sh 
+ 1263  nano plotsr.plotting.script.sh 
+ 1264  bash plotsr.plotting.script.sh 
+ 1265  nano plotsr.plotting.script.sh 
+ 1266  bash plotsr.plotting.script.sh 
+ 1267  nano plotsr.plotting.script.sh 
+ 1268  bash plotsr.plotting.script.sh 
+ 1269  nano plotsr.plotting.script.sh 
+ 1270  bash plotsr.plotting.script.sh 
+ 1271  nano plotsr.plotting.script.sh 
+ 1272  bash plotsr.plotting.script.sh 
+ 1273  nano plotsr.plotting.script.sh 
+ 1274  bash plotsr.plotting.script.sh 
+ 1275  nano plotsr.plotting.script.sh 
+ 1276  bash plotsr.plotting.script.sh 
+ 1277  nano plotsr.plotting.script.sh 
+ 1278  bash plotsr.plotting.script.sh 
+ 1279  nano plotsr.plotting.script.sh 
+ 1280  bash plotsr.plotting.script.sh 
+ 1281  nano plotsr.plotting.script.sh 
+ 1282  bash plotsr.plotting.script.sh 
+ 1283  nano plotsr.plotting.script.sh 
+ 1284  bash plotsr.plotting.script.sh 
+ 1285  nano plotsr.plotting.script.sh 
+ 1286  bash plotsr.plotting.script.sh 
+ 1287  nano plotsr.plotting.script.sh 
+ 1288  clear
+ 1289  nano plotsr.plotting.script.sh 
+ 1290  bash plotsr.plotting.script.sh 
+ 1291  nano plotsr.plotting.script.sh 
+ 1292  bash plotsr.plotting.script.sh 
+ 1293  nano plotsr.plotting.script.sh 
+ 1294  bash plotsr.plotting.script.sh 
+ 1295  nano plotsr.plotting.script.sh 
+ 1296  bash plotsr.plotting.script.sh 
+ 1297  # Function to get the maximum coordinate for a chromosome from syri.out files
+ 1298  get_max_coord() {     grep -h "^$1" *syri.out | awk '{print $3}' | sort -n | tail -n 1; }
+ 1299  # Get the maximum coordinate for chromosome A13
+ 1300  max_coord=$(get_max_coord "A13")
+ 1301  chr_length=$((max_coord + 1000000))  # Add 1Mb buffer
+ 1302  # Create a properly formatted genomes.txt file
+ 1303  cat > genomes.txt << EOL
+ 1304  #filenametags
+ 1305  CRI12.chr_A13.fa CRI12lw:1.5
+ 1306  NDM8.chr_A13.fa NDM8lw:1.5
+ 1307  ZM24.chr_A13.fa ZM24lw:1.5
+ 1308  ZZ2.chr_A13.fa ZZ2lw:1.5
+ 1309  EOL
+ 1310  # Array of syri.out files
+ 1311  syri_files=(     "CRI12_NDM8syri.out"     "NDM8_CRI12syri.out"     "ZM24_CRI12syri.out"     "ZZ2_CRI12syri.out"     "ZZ2_ZM24syri.out"     "CRI12_ZM24syri.out"     "NDM8_ZM24syri.out"     "ZM24_NDM8syri.out"     "ZZ2_NDM8syri.out" )
+ 1312  # Prepare the plotsr command
+ 1313  plotsr_cmd="plotsr --genomes genomes.txt --chr A13:1-$chr_length -o genomes_output_plot.png -W 20 -H 10"
+ 1314  # Add existing syri.out files to the command
+ 1315  for file in "${syri_files[@]}"; do     if [ -f "$file" ]; then         plotsr_cmd+=" --sr $file";     else         echo "Warning: $file not found. Skipping.";     fi; done
+ 1316  # Run plotsr with error handling
+ 1317  if $plotsr_cmd; then     echo "Plot generation complete. Check genomes_output_plot.png"; else     echo "Plot generation failed. Check the error messages above."; fi
+ 1318  clear
+ 1319  ls
+ 1320  nano ZZ2.ref.all.other.query.align.script.sh 
+ 1321  clear
+ 1322  minimap
+ 1323  minimap2
+ 1324  clear
+ 1325  ls
+ 1326  bash ZZ2.ref.all.other.query.align.script.sh 
+ 1327  clear
+ 1328  ls
+ 1329  samtools
+ 1330  clear
+ 1331  ls
+ 1332  samtools index TM1.HAU.CRI12.A13.bam
+ 1333  samtools index TM1.HAU.NDM8.A13.bam
+ 1334  samtools index TM1.HAU.ZM24.A13.bam
+ 1335  samtools index TM1.HAU.ZZ2.A13.bam
+ 1336  clear
+ 1337  ls
+ 1338  nano run_syri_all.sh 
+ 1339  ls *.bam
+ 1340  nano run_syri_all.sh 
+ 1341  bash run_syri_all.sh 
+ 1342  conda deactivate
+ 1343  conda activate syri_env
+ 1344  bash run_syri_all.sh 
+ 1345  clear
+ 1346  ls
+ 1347  ls *.fa
+ 1348  conda activate syri_env
+ 1349  nano run_syri_all.sh 
+ 1350  bash run_syri_all.sh 
+ 1351  nano run_syri_all.sh 
+ 1352  bash run_syri_all.sh 
+ 1353  nano run_syri_all.sh 
+ 1354  bash run_syri_all.sh 
+ 1355  clear
+ 1356  ls *.bam
+ 1357  ls
+ 1358  nano run_syri_all.sh 
+ 1359  bash run_syri_all.sh 
+ 1360  ls *.bam
+ 1361  nano run_syri_all.sh 
+ 1362  bash run_syri_all.sh 
+ 1363  clear
+ 1364  ls
+ 1365  nano plotsr.plotting.script.sh 
+ 1366  bash plotsr.plotting.script.sh 
+ 1367  conda deactivate
+ 1368  conda activate GWAS
+ 1369  bash plotsr.plotting.script.sh 
+ 1370  nano plotsr.plotting.script.sh 
+ 1371  bash plotsr.plotting.script.sh 
+ 1372  nano plotsr.plotting.script.sh 
+ 1373  bash plotsr.plotting.script.sh 
+ 1374  nano plotsr.plotting.script.sh 
+ 1375  bash plotsr.plotting.script.sh 
+ 1376  nano plotsr.plotting.script.sh 
+ 1377  bash plotsr.plotting.script.sh 
+ 1378  nano plotsr.plotting.script.sh 
+ 1379  bash plotsr.plotting.script.sh 
+ 1380  nano plotsr.plotting.script.sh 
+ 1381  bash plotsr.plotting.script.sh 
+ 1382  nano plotsr.plotting.script.sh 
+ 1383  bash plotsr.plotting.script.sh 
+ 1384  clera
+ 1385  ls
+ 1386  clear
+ 1387  ls
+ 1388  ls *.vcf
+ 1389  nano combine_vcfs.script.sh
+ 1390  chmod +x combine_vcfs.script.sh 
+ 1391  bash combine_vcfs.script.sh 
+ 1392  nano combine_vcfs.script.sh
+ 1393  ls
+ 1394  bash combine_vcfs.script.sh 
+ 1395  nano combine_vcfs.script.sh
+ 1396  bash combine_vcfs.script.sh 
+ 1397  nano combine_vcfs.script.sh
+ 1398  bash combine_vcfs.script.sh 
+ 1399  clear
+ 1400  la
+ 1401  ls *.vcf
+ 1402  nano vcf_count_plot_script.py
+ 1403  chmod +x vcf_count_plot_script.py 
+ 1404  python vcf_count_plot_script.py 
+ 1405  nano vcf_count_plot_script.py
+ 1406  python vcf_count_plot_script.py 
+ 1407  nano vcf_count_plot_script.py
+ 1408  python vcf_count_plot_script.py 
+ 1409  nano extract.GhSDR500.region.sh
+ 1410  chmod +x extract.GhSDR500.region.sh 
+ 1411  bash extract.GhSDR500.region.sh 
+ 1412  for vcf in TM1.HAU_CRI12syri.vcf TM1.HAU_NDM8syri.vcf TM1.HAU_ZM24syri.vcf TM1.HAU_ZZ2syri.vcf; do     sed 's/^##fileformat=VCFv4.3/##fileformat=VCFv4.2/' "$vcf" > "${vcf%.vcf}_v4.2.vcf"; done
+ 1413  ls
+ 1414  nano extract.GhSDR500.region.sh
+ 1415  bash extract.GhSDR500.region.sh 
+ 1416  nano plotting.2mb.GhSDR500.extracted.reg.script.py
+ 1417  python plotting.2mb.GhSDR500.extracted.reg.script.py 
+ 1418  clear
+ 1419  ls
+ 1420  ls *.vcf
+ 1421  ls *.recode.vcf
+ 1422  nano plotting.2mb.GhSDR500.extracted.reg.script.py
+ 1423  python plotting.2mb.GhSDR500.extracted.reg.script.py 
+ 1424  nano plotting.2mb.GhSDR500.extracted.reg.script.py
+ 1425  python plotting.2mb.GhSDR500.extracted.reg.script.py 
+ 1426  nano count.plot.syn.non_syn.2mbud.GhSDR500.script.py
+ 1427  python count.plot.syn.non_syn.2mbud.GhSDR500.script.py 
+ 1428  ls
+ 1429  nano syri_plotting.single.plots.script.sh
+ 1430  chmod +x syri_plotting.single.plots.script.sh 
+ 1431  bash syri_plotting.single.plots.script.sh 
+ 1432  conda deactivate
+ 1433  bash syri_plotting.single.plots.script.sh 
+ 1434  ls *.syri.out
+ 1435  ls *.out
+ 1436  clear
+ 1437  ls
+ 1438  ls *.out
+ 1439  ls *.fa
+ 1440  nano syri_plotting.single.plots.script.sh
+ 1441  bash syri_plotting.single.plots.script.sh 
+ 1442  nano syri_plotting.single.plots.script.sh
+ 1443  bash syri_plotting.single.plots.script.sh 
+ 1444  nano syri_plotting.single.plots.script.sh
+ 1445  bash syri_plotting.single.plots.script.sh 
+ 1446  ls
+ 1447  cd Postdoc_research/
+ 1448  cd VD_data/A13_gene/
+ 1449  ls
+ 1450  clear
+ 1451  ls
+ 1452  cd GhSDR500_CRI12vsTM-1/
+ 1453  ls
+ 1454  clear
+ 1455  ls
+ 1456  nano GhSDR500.2mb.region.extr.plot.percent.stacked.script.py
+ 1457  chmod +x GhSDR500.2mb.region.extr.plot.percent.stacked.script.py 
+ 1458  python GhSDR500.2mb.region.extr.plot.percent.stacked.script.py 
+ 1459  ls *.recode.vcf
+ 1460  ls
+ 1461  clear
+ 1462  ls
+ 1463  cd alignment_files/
+ 1464  ls
+ 1465  clear
+ 1466  ls
+ 1467  cd ..
+ 1468  ls
+ 1469  mv GhSDR500.2mb.region.extr.plot.percent.stacked.script.py alignment_files/
+ 1470  ls
+ 1471  clear
+ 1472  ls
+ 1473  cd alignment_files/
+ 1474  ls
+ 1475  clear
+ 1476  ls
+ 1477  python GhSDR500.2mb.region.extr.plot.percent.stacked.script.py 
+ 1478  nano GhSDR500.2mb.region.extr.plot.percent.stacked.script.py
+ 1479  python GhSDR500.2mb.region.extr.plot.percent.stacked.script.py 
+ 1480  cd Postdoc_research/
+ 1481  ls
+ 1482  clear
+ 1483  ls
+ 1484  VD_data/A13_gene/
+ 1485  ls
+ 1486  clera
+ 1487  clear
+ 1488  ls
+ 1489  cd VD_data/
+ 1490  cd A13_gene/
+ 1491  ls
+ 1492  clear
+ 1493  ls
+ 1494  cd GhSDR500_pangenome_data/
+ 1495  clear
+ 1496  ls
+ 1497  cd TE_enrichment_analysis/
+ 1498  slce
+ 1499  clear
+ 1500  ls
+ 1501  nano TE_enrichment_script.py
+ 1502  python TE_enrichment_script.py 
+ 1503  nano TE_enrichment_script.py
+ 1504  python TE_enrichment_script.py 
+ 1505  nano TE_enrichment_script.py
+ 1506  python TE_enrichment_script.py 
+ 1507  nano TE_enrichment_script.py
+ 1508  python TE_enrichment_script.py 
+ 1509  nano TE_enrichment_script.py
+ 1510  python TE_enrichment_script.py 
+ 1511  nano TE_enrichment_script.py
+ 1512  python TE_enrichment_script.py 
+ 1513  nano TE_enrichment_script.py
+ 1514  python TE_enrichment_script.py 
+ 1515  nano TE_enrichment_script.py
+ 1516  python TE_enrichment_script.py 
+ 1517  nano TE_enrichment_script.py
+ 1518  python TE_enrichment_script.py 
+ 1519  nano TE_enrichment_script.py
+ 1520  python TE_enrichment_script.py 
+ 1521  nano TE_enrichment_script.py
+ 1522  python TE_enrichment_script.py 
+ 1523  nano TE_enrichment_script.py
+ 1524  python TE_enrichment_script.py 
+ 1525  cd Postdoc_research/VD_data/A13_gene/GhSDR500_pangenome_data/
+ 1526  ls
+ 1527  clear
+ 1528  ls
+ 1529  cd TE_enrichment_analysis/
+ 1530  ls
+ 1531  clear
+ 1532  ls
+ 1533  nano extract_exact_TFs.matching.Chr.script.py
+ 1534  chmod +x extract_exact_TFs.matching.Chr.script.py 
+ 1535  ls
+ 1536  python extract_exact_TFs.matching.Chr.script.py 
+ 1537  cd ..
+ 1538  cd GoPGF_chipseq/
+ 1539  slc
+ 1540  clear
+ 1541  ls
+ 1542  nano GoPGF_chipseq.plot
+ 1543  chmod +x GoPGF_chipseq.plot 
+ 1544  clear
+ 1545  ls
+ 1546  python GoPGF_chipseq.plot.py 
+ 1547  nano GoPGF_chipseq.plot.py
+ 1548  python GoPGF_chipseq.plot.py 
+ 1549  nano GoPGF_chipseq.plot.py
+ 1550  clear
+ 1551  ls
+ 1552  python GoPGF_chipseq.plot.py 
+ 1553  nano GoPGF_chipseq.plot.py
+ 1554  python GoPGF_chipseq.plot.py 
+ 1555  nano GoPGF_chipseq.plot.different.style.py
+ 1556  nano GoPGF_chipseq.plot.different.style.py 
+ 1557  python GoPGF_chipseq.plot.different.style.py 
+ 1558  nano GoPGF_chipseq.plot.different.style.py 
+ 1559  python GoPGF_chipseq.plot.different.style.py 
+ 1560  nano GoPGF_chipseq.plot.different.style2.py 
+ 1561  python GoPGF_chipseq.plot.different.style2.py 
+ 1562  nano GoPGF_chipseq.plot.different.style2.py 
+ 1563  python GoPGF_chipseq.plot.different.style2.py 
+ 1564  nano GoPGF_chipseq.plot.different.style2.py 
+ 1565  python GoPGF_chipseq.plot.different.style2.py 
+ 1566  nano GoPGF_chipseq.plot.different.style2.py 
+ 1567  python GoPGF_chipseq.plot.different.style2.py 
+ 1568  nano GoPGF_chipseq.plot.different.style2.py 
+ 1569  python GoPGF_chipseq.plot.different.style2.py 
+ 1570  nano PlantTFDB.data.plot.script.py
+ 1571  python PlantTFDB.data.plot.script.py 
+ 1572  nano PlantTFDB.data.plot.script.py
+ 1573  python PlantTFDB.data.plot.script.py 
+ 1574  python PlantTFDB.data.plot.script.hexbin.plot.py 
+ 1575  nano PlantTFDB.data.plot.script.hexbin.plot.py 
+ 1576  python PlantTFDB.data.plot.script.hexbin.plot.py 
+ 1577  nano PlantTFDB.data.plot.script.hexbin.plot.py 
+ 1578  python PlantTFDB.data.plot.script.other.type.plot.py 
+ 1579  ls
+ 1580  cd ..
+ 1581  ls
+ 1582  cd GhSDR500_single_cell_data_MP/
+ 1583  ls
+ 1584  clear
+ 1585  ls
+ 1586  nano GhSDR500_single.cell.plot.script.py
+ 1587  chmod +x GhSDR500_single.cell.plot.script.py 
+ 1588  clear
+ 1589  ls
+ 1590  python GhSDR500_single.cell.plot.script.py 
+ 1591  nano GhSDR500_single.cell.plot.script.py
+ 1592  python GhSDR500_single.cell.plot.script.py 
+ 1593  nano GhSDR500_single.cell.plot.script.py
+ 1594  python GhSDR500_single.cell.plot.script.py 
+ 1595  nano GhSDR500_single.cell.plot.script.py
+ 1596  python GhSDR500_single.cell.plot.script.py 
+ 1597  nano GhSDR500_single.cell.plot.script.py
+ 1598  python GhSDR500_single.cell.plot.script.py 
+ 1599  nano GhSDR500_single.cell.plot.script.py
+ 1600  python GhSDR500_single.cell.plot.script.py 
+ 1601  nano GhSDR500_single.cell.plot.script.py
+ 1602  python GhSDR500_single.cell.plot.script.py 
+ 1603  nano GhSDR500_single.cell.plot.script.py
+ 1604  python GhSDR500_single.cell.plot.script.py 
+ 1605  nano GhSDR500_single.cell.plot.script.py
+ 1606  python GhSDR500_single.cell.plot.script.py 
+ 1607  nano GhSDR500_single.cell.plot.script.py
+ 1608  python GhSDR500_single.cell.plot.script.py 
+ 1609  nano GhSDR500_single.cell.plot.script.py
+ 1610  python GhSDR500_single.cell.plot.script.py 
+ 1611  nano GhSDR500_single.cell.plot.script.py
+ 1612  python GhSDR500_single.cell.plot.script.py 
+ 1613  nano GhSDR500_single.cell.plot.script.py
+ 1614  python GhSDR500_single.cell.plot.script.py 
+ 1615  nano GhSDR500_single.cell.plot.script.py
+ 1616  python GhSDR500_single.cell.plot.script.py 
+ 1617  nano GhSDR500_single.cell.plot.script.py
+ 1618  python GhSDR500_single.cell.plot.script.py 
+ 1619  nano GhSDR500_single.cell.plot.script.py
+ 1620  python GhSDR500_single.cell.plot.script.py 
+ 1621  nano GhSDR500_single.cell.plot.script.py
+ 1622  python GhSDR500_single.cell.plot.script.py 
+ 1623  nano GhSDR500_single.cell.plot.script.py
+ 1624  python GhSDR500_single.cell.plot.script.py 
+ 1625  nano GhSDR500_single.cell.plot.script.py
+ 1626  python GhSDR500_single.cell.plot.script.py 
+ 1627  nano GhSDR500_single.cell.plot.script.py
+ 1628  python GhSDR500_single.cell.plot.script.py 
+ 1629  nano GhSDR500_single.cell.plot.script.py
+ 1630  python GhSDR500_single.cell.plot.script.py 
+ 1631  nano GhSDR500_single.cell.plot.script.py
+ 1632  python GhSDR500_single.cell.plot.script.py 
+ 1633  nano GhSDR500_single.cell.plot.script.py
+ 1634  python GhSDR500_single.cell.plot.script.py 
+ 1635  nano GhSDR500_single.cell.plot.script.py
+ 1636  clear
+ 1637  ls
+ 1638  python GhSDR500_single.cell.plot.script.py 
+ 1639  nano GhSDR500_single.cell.plot.script.py
+ 1640  python GhSDR500_single.cell.plot.script.py 
+ 1641  nano GhSDR500_single.cell.plot.script.py
+ 1642  python GhSDR500_single.cell.plot.script.py 
+ 1643  python
+ 1644  pip install umap-learn
+ 1645  nano GhSDR500_single.cell.plot.script.py
+ 1646  python GhSDR500_single.cell.plot.script.py 
+ 1647  nano GhSDR500_single.cell.plot.script.py
+ 1648  python GhSDR500_single.cell.plot.script.py 
+ 1649  nano GhSDR500_single.cell.plot.script.py
+ 1650  python GhSDR500_single.cell.plot.script.py 
+ 1651  nano GhSDR500_single.cell.plot.script.py
+ 1652  python GhSDR500_single.cell.plot.script.py 
+ 1653  nano GhSDR500_single.cell.plot.script.py
+ 1654  python GhSDR500_single.cell.plot.script.py 
+ 1655  nano GhSDR500_single.cell.plot.script.py
+ 1656  clear
+ 1657  ls
+ 1658  python GhSDR500_single.cell.plot.script.py 
+ 1659  nano GhSDR500_single.cell.plot.script.py
+ 1660  python GhSDR500_single.cell.plot.script.py 
+ 1661  nano GhSDR500_single.cell.plot.script.py
+ 1662  python GhSDR500_single.cell.plot.script.py 
+ 1663  nano GhSDR500_single.cell.plot.script.py
+ 1664  python GhSDR500_single.cell.plot.script.py 
+ 1665  nano GhSDR500_single.cell.plot.script.py
+ 1666  python GhSDR500_single.cell.plot.script.py 
+ 1667  nano GhSDR500_single.cell.plot.script.py
+ 1668  python GhSDR500_single.cell.plot.script.py 
+ 1669  nano GhSDR500_single.cell.plot.script.py
+ 1670  python GhSDR500_single.cell.plot.script.py 
+ 1671  nano GhSDR500_single.cell.plot.script.py
+ 1672  python GhSDR500_single.cell.plot.script.py 
+ 1673  nano GhSDR500_single.cell.plot.script.py
+ 1674  python GhSDR500_single.cell.plot.script.py 
+ 1675  nano GhSDR500_single.cell.plot.script.py
+ 1676  python GhSDR500_single.cell.plot.script.py 
+ 1677  nano GhSDR500_single.cell.plot.script.py
+ 1678  python GhSDR500_single.cell.plot.script.py 
+ 1679  nano GhSDR500_single.cell.plot.script.py
+ 1680  python GhSDR500_single.cell.plot.script.py 
+ 1681  nano GhSDR500_single.cell.plot.script.py
+ 1682  python GhSDR500_single.cell.plot.script.py 
+ 1683  nano GhSDR500_single.cell.plot.script.py
+ 1684  python GhSDR500_single.cell.plot.script.py 
+ 1685  nano GhSDR500_single.cell.plot.script.py
+ 1686  python GhSDR500_single.cell.plot.script.py 
+ 1687  nano GhSDR500_single.cell.plot.script.py
+ 1688  python GhSDR500_single.cell.plot.script.py 
+ 1689  nano GhSDR500_single.cell.plot.script.py
+ 1690  python GhSDR500_single.cell.plot.script.py 
+ 1691  nano GhSDR500_single.cell.plot.script.py
+ 1692  python GhSDR500_single.cell.plot.script.py 
+ 1693  nano GhSDR500_single.cell.plot.script.py
+ 1694  python GhSDR500_single.cell.plot.script.py 
+ 1695  nano GhSDR500_single.cell.plot.script.py
+ 1696  python GhSDR500_single.cell.plot.script.py 
+ 1697  nano GhSDR500_single.cell.plot.script.py
+ 1698  python GhSDR500_single.cell.plot.script.py 
+ 1699  nano GhSDR500_single.cell.plot.script.py
+ 1700  python GhSDR500_single.cell.plot.script.py 
+ 1701  wget https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE224635&format=file
+ 1702  wget -O GSE243419.tar "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE243419&format=file"
+ 1703  clera
+ 1704  clear
+ 1705  ls
+ 1706  python GhSDR500_single.cell.plot.script.py 
+ 1707  nano GhSDR500.exp.diff.cells.plot.script.py
+ 1708  python GhSDR500.exp.diff.cells.plot.script.py
+ 1709  nano GhSDR500.exp.diff.cells.plot.script.py
+ 1710  python GhSDR500.exp.diff.cells.plot.script.py
+ 1711  nano GhSDR500.exp.diff.cells.plot.script.py
+ 1712  python GhSDR500.exp.diff.cells.plot.script.py
+ 1713  ls
+ 1714  python
+ 1715  nano GhSDR500.cluster.up.down.genes.Go.plotting.script.py
+ 1716  python GhSDR500.cluster.up.down.genes.Go.plotting.script.py 
+ 1717  nano DNA.methylation.plot.script.py
+ 1718  python DNA.methylation.plot.script.py 
+ 1719  nano DNA.methylation.plot.script.py
+ 1720  python DNA.methylation.plot.script.py 
+ 1721  nano DNA.methylation.plot.script.py
+ 1722  python DNA.methylation.plot.script.py 
+ 1723  nano DNA_methylation.boxplot.script.py
+ 1724  python DNA_methylation.boxplot.script.py 
+ 1725  nano DNA_methylation.boxplot.script.py
+ 1726  python DNA_methylation.boxplot.script.py 
+ 1727  nano DNA_methylation.boxplot.script.py
+ 1728  python DNA_methylation.boxplot.script.py 
+ 1729  nano DNA_methylation.boxplot.script.py
+ 1730  python DNA_methylation.boxplot.script.py 
+ 1731  nano DNA_methylation.boxplot.script.py
+ 1732  python DNA_methylation.boxplot.script.py 
+ 1733  nano DNA_methylation.boxplot.script.py
+ 1734  python DNA_methylation.boxplot.script.py 
+ 1735  nano DNA_methylation.boxplot.script.py
+ 1736  python DNA_methylation.boxplot.script.py 
+ 1737  nano DNA_methylation.boxplot.script.py
+ 1738  python DNA_methylation.boxplot.script.py 
+ 1739  nano DNA_methylation.boxplot.script.py
+ 1740  python DNA_methylation.boxplot.script.py 
+ 1741  nano DNA_methylation.boxplot.script.py
+ 1742  python DNA_methylation.boxplot.script.py 
+ 1743  nano DNA_methylation.boxplot.script.py
+ 1744  python DNA_methylation.boxplot.script.py 
+ 1745  nano DNA_methylation.boxplot.script.py
+ 1746  python DNA_methylation.boxplot.script.py 
+ 1747  nano DNA_methylation.boxplot.script.py
+ 1748  python DNA_methylation.boxplot.script.py 
+ 1749  nano DNA_methylation.boxplot.script.py
+ 1750  python DNA_methylation.boxplot.script.py 
+ 1751  nano DNA_methylation.boxplot.script.py
+ 1752  python DNA_methylation.boxplot.script.py 
+ 1753  nano DNA_methylation.boxplot.script.py
+ 1754  python DNA_methylation.boxplot.script.py 
+ 1755  nano DNA_methylation.boxplot.script.py
+ 1756  python DNA_methylation.boxplot.script.py 
+ 1757  nano DNA_methylation.boxplot.script.py
+ 1758  python DNA_methylation.boxplot.script.py 
+ 1759  nano DNA_methylation.boxplot.script.py
+ 1760  python DNA_methylation.boxplot.script.py 
+ 1761  nano DNA_methylation.boxplot.script.py
+ 1762  python DNA_methylation.boxplot.script.py 
+ 1763  nano DNA_methylation.boxplot.script.py
+ 1764  python DNA_methylation.boxplot.script.py 
+ 1765  nano DNA_methylation.boxplot.script.py
+ 1766  python DNA_methylation.boxplot.script.py 
+ 1767  nano DNA_methylation.boxplot.script.py
+ 1768  python DNA_methylation.boxplot.script.py 
+ 1769  nano DNA_methylation.boxplot.script.py
+ 1770  ls
+ 1771  clear
+ 1772  ls
+ 1773  python DNA_methylation.boxplot.script.py 
+ 1774  nano DNA.methylation.boxplot.ggplot2.R
+ 1775  ls
+ 1776  chmod +x DNA.methylation.boxplot.ggplot2.R 
+ 1777  clear
+ 1778  Rscript DNA.methylation.boxplot.ggplot2.R 
+ 1779  nano DNA.methylation.boxplot.ggplot2.R
+ 1780  Rscript DNA.methylation.boxplot.ggplot2.R 
+ 1781  nano DNA.methylation.boxplot.ggplot2.R
+ 1782  Rscript DNA.methylation.boxplot.ggplot2.R 
+ 1783  nano DNA.methylation.boxplot.ggplot2.R
+ 1784  Rscript DNA.methylation.boxplot.ggplot2.R 
+ 1785  nano DNA.methylation.boxplot.ggplot2.R
+ 1786  Rscript DNA.methylation.boxplot.ggplot2.R 
+ 1787  nano DNA.methylation.boxplot.ggplot2.R
+ 1788  R
+ 1789  ls
+ 1790  ls
+ 1791  cd Postdoc_research/
+ 1792  ls
+ 1793  clear
+ 1794  ls
+ 1795  cd VD_data/
+ 1796  ls
+ 1797  cd A13_gene/
+ 1798  ls
+ 1799  clear
+ 1800  ls
+ 1801  cd sustech_expression.all.cotton.libraries/
+ 1802  ls
+ 1803  clear
+ 1804  ls
+ 1805  nano cotton_FPKM_data.csv 
+ 1806  nano Extract.SRX.matching.script.py
+ 1807  chmod +x Extract.SRX.matching.script.py 
+ 1808  python Extract.SRX.matching.script.py 
+ 1809  cd ..
+ 1810  ls
+ 1811  clear
+ 1812  ls
+ 1813  cd GhSDR500_region_duplication_type_gene_exp/
+ 1814  ls
+ 1815  clear
+ 1816  ls
+ 1817  nano GhSDR500_its_duplicate.exp.comp.script.py
+ 1818  nano GhSDR500_its_duplicate.exp.comp.script.R
+ 1819  Rscript GhSDR500_its_duplicate.exp.comp.script.R 
+ 1820  nano GhSDR500_its_duplicate.exp.comp.script.R
+ 1821  Rscript GhSDR500_its_duplicate.exp.comp.script.R 
+ 1822  nano GhSDR500_its_duplicate.exp.comp.script.R
+ 1823  Rscript GhSDR500_its_duplicate.exp.comp.script.R 
+ 1824  nano GhSDR500.duplicate.gene.boxplot.exp.script.R
+ 1825  Rscript GhSDR500.duplicate.gene.boxplot.exp.script.R
+ 1826  nano GhSDR500.duplicate.gene.boxplot.exp.script.R
+ 1827  Rscript GhSDR500.duplicate.gene.boxplot.exp.script.R
+ 1828  R
+ 1829  cd Postdoc_research/VD_data/A13_gene/
+ 1830  ls
+ 1831  clear
+ 1832  ls
+ 1833  cd GhSDR500_region_duplication_type_gene_exp/
+ 1834  ls
+ 1835  clear
+ 1836  ls
+ 1837  nano GhSDR500.duplicate.gene.boxplot.exp.script.R 
+ 1838  Rscript GhSDR500.duplicate.gene.boxplot.exp.script.R
+ 1839  nano GhSDR500.duplicate.gene.boxplot.exp.script.R 
+ 1840  clear
+ 1841  ls
+ 1842  Rscript GhSDR500.all.copies.duplicates.gene.boxplot.exp.script.R
+ 1843  nano GhSDR500.duplicate.gene.boxplot.exp.script.R 
+ 1844  Rscript GhSDR500.all.copies.duplicates.gene.boxplot.exp.script.R
+ 1845  R
+ 1846  nano GhSDR500.duplicate.gene.boxplot.exp.script.R 
+ 1847  Rscript GhSDR500.all.copies.duplicates.gene.boxplot.exp.script.R
+ 1848  nano GhSDR500.duplicate.gene.boxplot.exp.script.R 
+ 1849  Rscript GhSDR500.all.copies.duplicates.gene.boxplot.exp.script.R
+ 1850  nano GhSDR500.duplicate.gene.boxplot.exp.script.R 
+ 1851  Rscript GhSDR500.all.copies.duplicates.gene.boxplot.exp.script.R
+ 1852  nano GhSDR500.duplicate.gene.boxplot.exp.script.R 
+ 1853  Rscript GhSDR500.all.copies.duplicates.gene.boxplot.exp.script.R
+ 1854  nano GhSDR500.duplicate.gene.boxplot.exp.script.R 
+ 1855  Rscript GhSDR500.all.copies.duplicates.gene.boxplot.exp.script.R
+ 1856  nano GhSDR500.duplicate.gene.boxplot.exp.script.R 
+ 1857  Rscript GhSDR500.all.copies.duplicates.gene.boxplot.exp.script.R
+ 1858  nano GhSDR500.duplicate.gene.boxplot.exp.script.R 
+ 1859  Rscript GhSDR500.all.copies.duplicates.gene.boxplot.exp.script.R
+ 1860  R
+ 1861  clear
+ 1862  ls
+ 1863  nano GhSDR500_its_duplicate.exp.comp.script.R
+ 1864  R
+ 1865  cd ..
+ 1866  mkdir GhSDR500.GoPGF.GhHAM.mutant
+ 1867  cd GhSDR500.GoPGF.GhHAM.mutant/]
+ 1868  cd GhSDR500.GoPGF.GhHAM.mutant
+ 1869  clear
+ 1870  ls
+ 1871  python 
+ 1872  clear
+ 1873  ls
+ 1874  R
+ 1875  clear
+ 1876  ls
+ 1877  cd .
+ 1878  cd ..
+ 1879  ls
+ 1880  cler
+ 1881  ls
+ 1882  clear
+ 1883  ls
+ 1884  cd ABC_transporter_expression/
+ 1885  ls
+ 1886  clear
+ 1887  ls
+ 1888  cd ..
+ 1889  ls
+ 1890  l
+ 1891  GhSDR500_region_duplication_type_gene_exp/
+ 1892  ls
+ 1893  cd GhSDR500_region_duplication_type_gene_exp/
+ 1894  ls
+ 1895  clear
+ 1896  ls
+ 1897  cd ..
+ 1898  cd ABC_transporter_expression/
+ 1899  cler
+ 1900  la
+ 1901  clear
+ 1902  ls
+ 1903  rm *.Identifier
+ 1904  ls
+ 1905  clear
+ 1906  ls
+ 1907  nano GhSDR500_its_duplicate.exp.comp.script.R 
+ 1908  ls
+ 1909  Rscript GhSDR500_its_duplicate.exp.comp.script.R 
+ 1910  clear
+ 1911  ls
+ 1912  R
+ 1913  sudo apt update
+ 1914  sudo apt install cmake
+ 1915  clear
+ 1916  ls
+ 1917  R
+ 1918  sudo apt remove r-base r-base-core
+ 1919  sudo apt update
+ 1920  sudo apt install -y software-properties-common
+ 1921  sudo add-apt-repository -y "ppa:marutter/rrutter4.0"
+ 1922  sudo add-apt-repository -y "ppa:c2d4u.team/c2d4u4.0+"
+ 1923  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+ 1924  sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu <version>-cran40/"
+ 1925  lsb_release -c
+ 1926  sudo apt update
+ 1927  sudo apt install r-base
+ 1928  R --version
+ 1929  sudo apt install build-essential libcurl4-openssl-dev libssl-dev libxml2-dev
+ 1930  ls
+ 1931  nano install.R.packages.R
+ 1932  Rscript install.R.packages.R 
+ 1933  nano install.R.packages.R
+ 1934  Rscript install.R.packages.R 
+ 1935  R
+ 1936  clear
+ 1937  R
+ 1938  sudo apt-get update
+ 1939  sudo apt-get install build-essential gfortran
+ 1940  R
+ 1941  clear
+ 1942  R
+ 1943  cd ..
+ 1944  ls
+ 1945  cd GhSDR500.GoPGF.GhHAM.mutant/
+ 1946  ls
+ 1947  clear
+ 1948  ls
+ 1949  R
+ 1950  cd ..
+ 1951  ls
+ 1952  cd ABC_transporter_expression/
+ 1953  ls
+ 1954  clear
+ 1955  ls
+ 1956  R
+ 1957  ls
+ 1958  git clone https://github.com/Mubashir3164/Mubashir3164.github.io
+ 1959  cd Mubashir3164.github.io
+ 1960  ls
+ 1961  clear
+ 1962  ls
+ 1963  nano index.html
+ 1964  ls
+ 1965  nano style.css
+ 1966  cd tutorials
+ 1967  mkdir tutorials
+ 1968  ls
+ 1969  cd tutorials/
+ 1970  ls
+ 1971  clear
+ 1972  ls
+ 1973  nano tutorial1.html
+ 1974  nano tutorial2.html
+ 1975  nano tutorial3.html
+ 1976  ls
+ 1977  ad ..
+ 1978  ls
+ 1979  cd ..
+ 1980  clear
+ 1981  ls
+ 1982  nano README.md 
+ 1983  git add .
+ 1984  git commit -m "Initial setup for portfolio website"
+ 1985  cd ..
+ 1986  git commit -m "Initial setup for portfolio website"
+ 1987  git config --global user.name "Mubashir Abbas"
+ 1988  git config --global user.email "mubashirabbas3164@yahoo.com"
+ 1989  git add .
+ 1990  cd Mubashir3164.github.io/
+ 1991  ls
+ 1992  git add .
+ 1993  git commit -m "Initial setup for portfolio website"
+ 1994  git push origin main
+ 1995  git config --global credential.helper cache
+ 1996  git push origin main
+ 1997  git remote -v
+ 1998  git push origin main
+ 1999  cd Mubashir3164.github.io/
+ 2000  clear
+ 2001  ls
+ 2002  git add .
+ 2003  git commit -m "Initial commit for portfolio website"
+ 2004  git push origin main
+ 2005  git credential-cache exit
+ 2006  git push origin main
+ 2007  git remote -v
+ 2008  git push origin main
+ 2009  ssh-keygen -t rsa -b 4096 -C "mubashirabbas3164@yahoo.com"
+ 2010  cat /home/abbas/.ssh/id_rsa.pub
+ 2011  ssh -T git@github.com
+ 2012  git remote set-url origin git@github.com:Mubashir3164/Mubashir3164.github.io.git
+ 2013  git remote -v
+ 2014  git push origin main
+ 2015  git pull origin main
+ 2016  ls
+ 2017  nano index.html 
+ 2018  ls
+ 2019  nano index.html 
+ 2020  git status
+ 2021  git add index.html
+ 2022  git add .
+ 2023  git commit -m "Updated portfolio with bioinformatics expertise and tutorials"
+ 2024  git push origin main
+ 2025  nano Mubashir_abbas.CV.html
+ 2026  git add Mubashir_abbas.CV.html
+ 2027  git commit -m "Added Mubashir Abbas CV HTML file"
+ 2028  git push -u origin main
+ 2029  rm Mubashir_abbas.CV.html
+ 2030  git add Mubashir_abbas.CV.html
+ 2031  git commit -m "Removed CV HTML file"
+ 2032  git push origin main
+ 2033  git add Mubashir_Abbas_CV.pdf
+ 2034  git commit -m "Added CV to portfolio"
+ 2035  git push origin main
+ 2036  <li><a href="Mubashir_Abbas_CV.pdf" target="_blank">Download My CV</a></li>
+ 2037  nano CV.html
+ 2038  git add CV.html
+ 2039  git commit -m "Added CV.html link"
+ 2040  git push origin main
+ 2041  ls
+ 2042  nano index.html 
+ 2043  nano style.css 
+ 2044  git add index.html style.css
+ 2045  git commit -m "Updated portfolio layout, removed repositories section"
+ 2046  git push origin main
+ 2047  https://raw.githubusercontent.com/Mubashir3164/Mubashir3164.github.io/main/index.html
+ 2048  nano portfolio.html
+ 2049  nano portfolio-style.css
+ 2050  git add portfolio.html portfolio-style.css
+ 2051  git commit -m "Renamed files and added research article section"
+ 2052  git push origin main
+ 2053  nano portfolio.html
+ 2054  nano portfolio-style.css
+ 2055  git add portfolio.html portfolio-style.css
+ 2056  git commit -m "Added representative published research article section"
+ 2057  git push origin main
+ 2058  nano index.html 
+ 2059  git add index.html
+ 2060  git commit -m "Added research article section with graphical abstract"
+ 2061  git push origin main
+ 2062  nano index.html 
+ 2063  git add index.html
+ 2064  git commit -m "Added navigation tabs for better organization"
+ 2065  git push origin main
+ 2066  ls
+ 2067  nano style.css 
+ 2068  git add index.html style.css
+ 2069  git commit -m "Added navigation tabs for better organization"
+ 2070  git push origin main
+ 2071  nano index.html 
+ 2072  nano style.css 
+ 2073  git add index.html style.css
+ 2074  git commit -m "Updated single page with introduction, tutorials, and publications"
+ 2075  git push origin main
+ 2076  ld
+ 2077  ls
+ 2078  cd tutorials/
+ 2079  ls
+ 2080  nano tutorial1.html 
+ 2081  nano bwa_tutorial.html
+ 2082  cd ..
+ 2083  git add index.html style.css
+ 2084  git commit -m "Updated single page with introduction, tutorials, and publications"
+ 2085  git push origin main
+ 2086  git add index.html style.css
+ 2087  git commit -m "Updated single page with introduction, tutorials, and publications"
+ 2088  git push origin main
+ 2089  git add index.html style.css
+ 2090  git commit -m "Updated single page with introduction, tutorials, and publications"
+ 2091  git push origin main
+ 2092  git status
+ 2093  ls tutorials/
+ 2094  git add tutorials/tutorial4.html
+ 2095  git commit -m "Add tutorial4.html"
+ 2096  git push origin main
+ 2097  history > github.porfolio.scripts.history.txt
