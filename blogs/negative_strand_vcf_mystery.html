@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding VCF Files and Negative Strand Genes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .highlight {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 4px solid #2c3e50;
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding VCF Files and Negative Strand Genes</h1>
+        <p>If you've ever worked with VCF (Variant Call Format) files, you might have noticed something confusing: sometimes the reference and alternate alleles don’t seem to match what you expect, especially for genes on the negative strand. Let’s break down why this happens and how to make sense of it.</p>
+
+        <h2>What’s the Problem?</h2>
+        <p>Imagine this situation:</p>
+        <ul>
+            <li>You’re analyzing a gene located on the negative strand of the DNA.</li>
+            <li>You find a SNP (single nucleotide polymorphism) in the coding region of this gene.</li>
+            <li>The reference genome shows a <strong>G</strong> at this position.</li>
+            <li>But your VCF file says the reference allele is <strong>C</strong> and the alternate allele is <strong>G</strong>.</li>
+        </ul>
+        <p>At first glance, this seems contradictory. Why does the VCF file show a different reference allele than the reference genome? The answer lies in how VCF files handle genes on the negative strand.</p>
+
+        <h2>Key Concepts to Understand</h2>
+        <p>To solve this puzzle, let’s go over a few important ideas:</p>
+
+        <h3>1. Reference Genome Orientation</h3>
+        <p>The reference genome is always written in the <strong>forward (5' to 3') orientation</strong>, even for genes on the negative strand. This means that the sequence you see in the reference genome is not always the same as the sequence used by the gene.</p>
+
+        <h3>2. How VCF Files Work</h3>
+        <p>VCF files report variants based on the <strong>forward strand</strong> of the reference genome. This is true even if the gene is on the negative strand. As a result, the alleles in the VCF file might look different from what you expect.</p>
+
+        <h3>3. Negative Strand Genes</h3>
+        <p>Genes on the negative strand are transcribed from the <strong>reverse complement</strong> of the reference sequence. This means that the actual mRNA sequence is the reverse complement of what’s shown in the reference genome.</p>
+
+        <h2>Why Does the VCF File Show Different Alleles?</h2>
+        <p>Let’s revisit the example:</p>
+        <ul>
+            <li>The gene is on the negative strand.</li>
+            <li>The reference genome shows a <strong>G</strong> at the position of interest (on the forward strand).</li>
+            <li>The VCF file shows <strong>C</strong> as the reference allele and <strong>G</strong> as the alternate allele.</li>
+        </ul>
+        <p>Here’s what’s happening:</p>
+        <div class="highlight">
+            <p>For genes on the negative strand, the VCF file shows the <strong>complement</strong> of the reference allele. Since <strong>G</strong> pairs with <strong>C</strong>, the VCF file reports <strong>C</strong> as the reference allele.</p>
+        </div>
+
+        <h2>What Does This Mean Biologically?</h2>
+        <p>In the actual mRNA of the gene (which is on the negative strand), this variant represents a <strong>C>G</strong> change. However, in the VCF file, it’s reported as a <strong>C>G</strong> change on the forward strand, which corresponds to a <strong>G>C</strong> change on the negative strand.</p>
+
+        <h2>Why Is This Important?</h2>
+        <p>This system of reporting variants ensures consistency across the genome, no matter which strand a gene is on. Here’s why it matters:</p>
+        <ul>
+            <li><strong>Consistency:</strong> All variants are reported in the same way, making it easier to compare data.</li>
+            <li><strong>Compatibility:</strong> Tools and databases can work together seamlessly because they use the same standard.</li>
+            <li><strong>Accuracy:</strong> It avoids confusion when analyzing genes on different strands.</li>
+        </ul>
+
+        <h2>Key Takeaway</h2>
+        <p>When working with VCF files, always check the strand orientation of the gene you’re analyzing. What you see in the VCF file might not match the reference genome directly, but it’s not an error—it’s just how the data is standardized.</p>
+        <p>By understanding this, you’ll be better equipped to interpret VCF files and avoid confusion when dealing with genes on the negative strand.</p>
+
+        <div class="footer">
+            <p>#Genomics #Bioinformatics #VCF #DNASequencing #ComputationalBiology</p>
+        </div>
+    </div>
+</body>
+</html>
