@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert VCF to Hapmap Format - My GitHub Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Convert VCF to Hapmap Format Using Tassel</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../introduction.html">Introduction</a></li>
+                    <li><a href="../tutorials.html">Tutorials</a></li>
+                    <li><a href="../publications.html">Publications</a></li>
+                    <li><a href="../blogs.html">Blogs</a></li>
+                    <li><a href="../bioinformatics-news.html">Bioinformatics News</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="tutorial-content">
+            <h2>Overview</h2>
+            <p>
+                In this tutorial, you'll learn how to convert VCF files to HapMap format using the command-line interface (CLI) of Tassel. The CLI version of Tassel is particularly useful for large datasets, where the GUI version might be less efficient. Follow the steps below to convert your VCF file to HapMap format.
+            </p>
+
+            <h2>Downloading Tassel Command-Line Version</h2>
+            <p>
+                First, you'll need to download the command-line version of <strong>Tassel 5.0</strong>. The following link provides detailed instructions for installation:
+            </p>
+            <ul>
+                <li><a href="https://bytebucket.org/tasseladmin/tassel-5-source/wiki/docs/Tassel5PipelineCLI.pdf?rev=eeb05c28894bf976c84bb110ec545647ab9a2f08" target="_blank">Tassel 5.0 Command-Line Interface Installation Guide</a></li>
+            </ul>
+
+            <h3>Prerequisites</h3>
+            <p>
+                Before you begin, ensure you have the following installed on your system:
+            </p>
+            <ul>
+                <li><strong>Java Development Kit (JDK) 8.0 or later</strong> is required for running Tassel.</li>
+            </ul>
+
+            <h2>Converting VCF to HapMap</h2>
+            <p>
+                Once you’ve installed Tassel and have your <strong>VCF file</strong> ready, follow these steps to convert it to HapMap format. 
+            </p>
+            <p>
+                Place your VCF file in your current working directory, then run the following command:
+            </p>
+            <pre><code>./run_pipeline.pl -Xms10g -Xmx40g -fork1 -vcf data.vcf -export outputfilename -exportType Hapmap</code></pre>
+
+            <h3>Explanation of Command</h3>
+            <ul>
+                <li><code>./run_pipeline.pl</code>: Executes the pipeline script for Tassel.</li>
+                <li><code>-Xms10g</code>: Specifies the initial memory size (10 GB). You can adjust this based on your system’s available memory.</li>
+                <li><code>-Xmx40g</code>: Specifies the maximum memory size (40 GB). Modify this according to your system’s memory capacity.</li>
+                <li><code>-fork1</code>: Runs the first step in parallel to speed up the process.</li>
+                <li><code>-vcf data.vcf</code>: Specifies the input VCF file to be converted.</li>
+                <li><code>-export outputfilename</code>: Defines the output file name for the HapMap format.</li>
+                <li><code>-exportType Hapmap</code>: Specifies that the output format should be HapMap.</li>
+            </ul>
+
+            <h3>Output File</h3>
+            <p>
+                After running the command, the output will be a HapMap file. This file will contain your genomic data in the HapMap format, ready for further analysis.
+            </p>
+
+            <h3>Using the GUI Version (Optional)</h3>
+            <p>
+                While the command-line version is recommended for large datasets, Tassel also has a graphical user interface (GUI) version. If your VCF file is not too large, you can use the GUI to perform the conversion. However, for large datasets, the CLI is much more efficient.
+            </p>
+
+            <h2>Reference</h2>
+            <p>
+                For more information on the Tassel software and its applications, refer to the following paper:
+            </p>
+            <p>
+                <em>"TASSEL: software for association mapping of complex traits in diverse samples"</em>, Peter J. Bradbury, Zhiwu Zhang, Dallas E. Kroon, Terry M. Casstevens, Yogesh Ramdoss, Edward S. Buckler, <strong>Bioinformatics</strong>, Volume 23, Issue 19, 1 October 2007, Pages 2633–2635.
+            </p>
+            <p>
+                <a href="https://doi.org/10.1093/bioinformatics/btm308" target="_blank">DOI: 10.1093/bioinformatics/btm308</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Mubashir3164 | <a href="mailto:mubashirabbas3164@yahoo.com">Contact Me</a></p>
+    </footer>
+</body>
+</html>
+

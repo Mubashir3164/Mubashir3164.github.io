@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GC Content Analyzer Tutorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>GC Content Analyzer Tutorial</h1>
+    <p>This tutorial will guide you through using a Python script to calculate the GC content of a DNA sequence. GC content is the percentage of bases in a DNA sequence that are either Guanine (G) or Cytosine (C).</p>
+
+    <h2>Step 1: Download the Script</h2>
+    <p>Download the Python script <code>gc_content_analyzer.py</code> from the link below:</p>
+    <p><a href="https://mubashir3164.github.io/tutorials/gc_content_analyzer.py" download>Download gc_content_analyzer.py</a></p>
+
+    <h2>Step 2: Run the Script</h2>
+    <p>Open a terminal or command prompt and navigate to the directory where the script is saved. Run the script using the following command:</p>
+    <pre><code>python3 gc_content_analyzer.py</code></pre>
+
+    <h2>Step 3: Input a DNA Sequence</h2>
+    <p>The script will prompt you to enter a DNA sequence. Type or paste your sequence and press Enter. For example:</p>
+    <pre><code>> ATGCGATCGATCGTAGCTAGCTAGCTAG</code></pre>
+    <p>The script will calculate and display the GC content of the sequence.</p>
+
+    <h2>Step 4: Exit the Program</h2>
+    <p>To exit the program, type <code>exit</code> and press Enter.</p>
+
+    <h2>Example Output</h2>
+    <p>Here’s an example of what the output might look like:</p>
+    <pre><code>GC Content Analyzer
+-------------------
+Enter a DNA sequence (or 'exit' to quit):
+> ATGCGATCGATCGTAGCTAGCTAGCTAG
+GC Content: 50.00%
+> exit
+Exiting the program. Goodbye!</code></pre>
+
+    <h2>How It Works</h2>
+    <p>The script uses a simple function to count the number of G and C bases in the sequence and calculates the percentage of GC content. It also includes input validation to ensure the sequence contains only valid DNA bases (A, T, C, G).</p>
+
+    <h2>Contributing</h2>
+    <p>If you'd like to contribute to this project, feel free to fork the repository and submit a pull request. You can also report issues or suggest improvements.</p>
