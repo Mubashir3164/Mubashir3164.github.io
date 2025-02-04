@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bash Scripting Basics for Biology Beginners</title>
+    <style>
+        body {font-family: Arial, sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 20px;}
+        h1, h2 {color: #2c5f92; border-bottom: 2px solid #4CAF50; padding-bottom: 8px;}
+        .code-block {background: #f4f4f4; padding: 15px; border-left: 4px solid #4CAF50; margin: 15px 0; font-family: monospace;}
+        .note {background: #e8f5e9; padding: 15px; border-left: 4px solid #45a049; margin: 15px 0;}
+        .term {color: #2c5f92; font-weight: bold;}
+    </style>
+</head>
+<body>
+    <h1>Introduction to Bash Scripting for Biology</h1>
+
+    <div class="note">
+        <h3>What is Bash Scripting?</h3>
+        <p>Bash scripting is like writing a recipe for your computer - it's a series of commands that:</p>
+        <ul>
+            <li>Automates repetitive tasks</li>
+            <li>Processes files and data</li>
+            <li>Combines multiple commands</li>
+        </ul>
+    </div>
+
+    <h2>1. Script Components Explained</h2>
+    
+    <div class="code-block">
+        #!/bin/bash  <span style="color: #666"># Shebang line</span><br>
+        # This is a comment <span style="color: #666"># Explanatory text</span><br>
+        echo "Analyzing DNA sequences"  <span style="color: #666"># Command</span>
+    </div>
+
+    <div class="note">
+        <h3>Key Elements of a Bash Script</h3>
+        <p><span class="term">Shebang Line (#!)</span>: First line starting with #!<br>
+        - Tells the computer this is a Bash script<br>
+        - Always use: <code>#!/bin/bash</code></p>
+        
+        <p><span class="term">Comments</span>: Lines starting with #<br>
+        - Ignored by the computer<br>
+        - Help explain your code</p>
+        
+        <p><span class="term">Commands</span>: Instructions to execute<br>
+        - Same commands you'd type in terminal<br>
+        - Example: <code>echo</code>, <code>grep</code>, <code>wc</code></p>
+    </div>
+
+    <h2>2. Creating a Basic Analysis Script</h2>
+    
+    <div class="code-block">
+        #!/bin/bash<br>
+        <br>
+        # Create sample DNA file<br>
+        echo ">Sample1<br>
+        ATGCGATCG<br>
+        >Sample2<br>
+        TAGCTAGCTAG" > sequences.fasta<br>
+        <br>
+        # Count sequences<br>
+        echo "Number of sequences: $(grep -c '^>' sequences.fasta)"<br>
+        <br>
+        # Calculate total length<br>
+        total_length=$(grep -v '^>' sequences.fasta | tr -d '\n' | wc -c)<br>
+        echo "Total length: $total_length bp"<br>
+        <br>
+        # Calculate GC%<br>
+        gc_count=$(grep -v '^>' sequences.fasta | tr -d '\n' | tr -cd 'GC' | wc -c)<br>
+        gc_percent=$(echo "scale=2; ($gc_count/$total_length)*100" | bc)<br>
+        echo "GC Content: $gc_percent%"
+    </div>
+
+    <div class="note">
+        <h3>Step-by-Step Explanation</h3>
+        <p><span class="term">Creating FASTA File</span>:<br>
+        - <code>echo</code> writes lines to sequences.fasta<br>
+        - <code>></code> indicates sequence names</p>
+        
+        <p><span class="term">Counting Sequences</span>:<br>
+        - <code>grep -c '^>'</code> counts lines starting with ></p>
+        
+        <p><span class="term">Calculating Length</span>:<br>
+        1. <code>grep -v '^>'</code>: Exclude header lines<br>
+        2. <code>tr -d '\n'</code>: Remove line breaks<br>
+        3. <code>wc -c</code>: Count characters</p>
+        
+        <p><span class="term">GC% Calculation</span>:<br>
+        1. <code>tr -cd 'GC'</code>: Keep only G/C<br>
+        2. <code>bc</code>: Calculator for percentage</p>
+    </div>
+
+    <h2>3. Running Your Script</h2>
+    
+    <div class="note">
+        <h3>Execution Instructions</h3>
+        <ol>
+            <li>Save as <code>dna_analysis.sh</code></li>
+            <li>Make executable:
+                <div class="code-block" style="margin: 10px 0;">
+                    chmod +x dna_analysis.sh
+                </div>
+            </li>
+            <li>Run:
+                <div class="code-block" style="margin: 10px 0;">
+                    ./dna_analysis.sh
+                </div>
+            </li>
+        </ol>
+    </div>
+
+    <h2>4. Expected Output</h2>
+    <div class="code-block">
+        Number of sequences: 2<br>
+        Total length: 19 bp<br>
+        GC Content: 47.36%
+    </div>
+
+    <div class="note">
+        <h3>Key Bash Concepts Used</h3>
+        <table style="width:100%">
+            <tr><th>Concept</th><th>Example</th><th>Purpose</th></tr>
+            <tr><td>Variables</td><td>total_length=...</td><td>Store values</td></tr>
+            <tr><td>Command Substitution</td><td>$(...)</td><td>Capture command output</td></tr>
+            <tr><td>Pipes (|)</td><td>cmd1 | cmd2</td><td>Pass output between commands</td></tr>
+            <tr><td>Redirection (> )</td><td>echo ... > file</td><td>Write to file</td></tr>
+        </table>
+    </div>
+
+    <div class="note">
+        <h3>Why This Matters for Biology</h3>
+        <ul>
+            <li>Automate DNA sequence analysis</li>
+            <li>Process multiple files quickly</li>
+            <li>Reproduce analyses exactly</li>
+            <li>Handle large datasets efficiently</li>
+        </ul>
+    </div>
+</body>
+</html>
