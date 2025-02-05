@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Population Genetics Analysis Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        code { background-color: #f4f4f4; padding: 2px 4px; border-radius: 4px; }
+        pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        h1, h2, h3 { color: #333; }
+        .section { margin-bottom: 2em; }
+    </style>
+</head>
+<body>
+    <h1>Population Genetics Analysis Tutorial</h1>
+    <p>This tutorial explains the analysis performed in the <code>population_genetics.sh</code> script. You can download the script from the link below:</p>
+    <p><a href="population_genetics.sh" download>Download population_genetics.sh</a></p>
+    
+    <div class="section">
+        <h2>1. Introduction</h2>
+        <p>The script performs population genetics analyses using a VCF file as input. It calculates nucleotide diversity (π), Tajima's D, and FST in sliding windows across the genome. Additionally, it generates visualizations of the results.</p>
+    </div>
+    
+    <div class="section">
+        <h2>2. Input Files</h2>
+        <ul>
+            <li><code>input.vcf</code>: The input VCF file containing genetic variants.</li>
+            <li><code>pop1.txt</code> & <code>pop2.txt</code>: Text files listing individuals from two populations for FST analysis.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>3. Analysis Steps</h2>
+        
+        <h3>3.1 Nucleotide Diversity (π)</h3>
+        <p>The script calculates nucleotide diversity (π) in 10kb sliding windows using VCFtools:</p>
+        <pre><code>vcftools --vcf input.vcf --window-pi 10000 --window-pi-step 5000 --out population_analysis_results/stats/pi</code></pre>
+        
+        <h3>3.2 Tajima's D</h3>
+        <p>Tajima's D is calculated for 10kb windows to detect selection signals:</p>
+        <pre><code>vcftools --vcf input.vcf --TajimaD 10000 --out population_analysis_results/stats/tajima</code></pre>
+        
+        <h3>3.3 Windowed FST</h3>
+        <p>FST values between two populations are computed in 10kb sliding windows:</p>
+        <pre><code>vcftools --vcf input.vcf --weir-fst-pop pop1.txt --weir-fst-pop pop2.txt --fst-window-size 10000 --fst-window-step 5000 --out population_analysis_results/stats/fst</code></pre>
+    </div>
+    
+    <div class="section">
+        <h2>4. Visualization</h2>
+        <p>The script generates plots for each analysis using Python with Matplotlib and Seaborn.</p>
+        
+        <h3>4.1 Nucleotide Diversity (π)</h3>
+        <p>Scatter plot of nucleotide diversity across genomic positions:</p>
+        <pre><code>plt.scatter(pi['POS'], pi['PI'], s=10, alpha=0.7, color='darkorange')</code></pre>
+        
+        <h3>4.2 Tajima's D</h3>
+        <p>Tajima's D values plotted along genomic coordinates:</p>
+        <pre><code>plt.scatter(tajima['POS'], tajima['D'], s=10, alpha=0.7, color='royalblue')</code></pre>
+        
+        <h3>4.3 Windowed FST</h3>
+        <p>FST values plotted to compare population differentiation:</p>
+        <pre><code>plt.scatter(fst['POS'], fst['FST'], s=10, alpha=0.7, color='forestgreen')</code></pre>
+    </div>
+    
+    <div class="section">
+        <h2>5. Output Files</h2>
+        <ul>
+            <li><code>population_analysis_results/stats/pi.windowed.pi</code>: Nucleotide diversity results.</li>
+            <li><code>population_analysis_results/stats/tajima.Tajima.D</code>: Tajima's D values.</li>
+            <li><code>population_analysis_results/stats/fst.windowed.weir.fst</code>: Windowed FST values.</li>
+            <li><code>population_analysis_results/plots/*.png</code>: Visualization plots.</li>
+            <li><code>population_analysis_results/report.html</code>: HTML summary report.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>6. Conclusion</h2>
+        <p>This script automates population genomics analysis, making it easier to compute diversity statistics and visualize results in a structured manner.</p>
+    </div>
+</body>
+</html>
