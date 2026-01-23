@@ -3,44 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs - My GitHub Portfolio</title>
+    <title>Blogs - Mubashir Abbas</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
-        <div class="header-container">
-            <h1>Blogs</h1>
+        <div class="header-content">
+            <a href="index.html" class="logo">Mubashir Abbas, Ph.D.</a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="introduction.html">Introduction</a></li>
+                    <li><a href="index.html">Profile</a></li>
                     <li><a href="tutorials.html">Tutorials</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="blogs.html">Blogs</a></li>
-                    <li><a href="bioinformatics-news.html">Bioinformatics News</a></li>
+                    <li><a href="blogs.html" class="active">Blogs</a></li>
+                    <li><a href="bioinformatics-news.html">News</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="blogs">
-            <h2>Blogs</h2>
-            <p>Welcome to my blog section! Here, I share insights and explanations on topics related to bioinformatics and computational biology.</p>
-            
-            <!-- Add a link to your new blog post -->
-            <div class="blog-post">
-                <h3><a href="blogs/negative_strand_vcf_mystery.html">Understanding VCF Files and Negative Strand Genes</a></h3>
-                <p>Learn why VCF files sometimes appear to contradict the reference genome when dealing with genes on the negative strand, and how to interpret these cases correctly.</p>
-            </div>
+        <div class="content-card">
+            <h1>Blogs</h1>
+            <p class="headline">Insights and explanations on topics related to bioinformatics and computational biology.</p>
 
-            <!-- Add more blog posts here as needed -->
-        </section>
+            <div class="tutorials-list">
+                <a href="blogs/negative_strand_vcf_mystery.html" class="tutorial-link">
+                    <span class="tutorial-title">Understanding VCF Files and Negative Strand Genes</span>
+                    <span class="tutorial-desc">Learn why VCF files sometimes appear to contradict the reference genome when dealing with genes on the negative strand, and how to interpret these cases correctly.</span>
+                </a>
+
+                </div>
+        </div>
     </main>
 
     <footer>
-        <p>© 2025 Mubashir3164 | <a href="mailto:mubashirabbas3164@yahoo.com">Contact Me</a></p>
+        <p>© 2025 Mubashir Abbas. All Rights Reserved. | <a href="mailto:mubashirabbas3164@yahoo.com">Contact Me</a></p>
     </footer>
+
 </body>
 </html>
