@@ -3,48 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorials - My GitHub Portfolio</title>
+    <title>Tutorials - Mubashir Abbas</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
-        <div class="header-container">
-            <h1>Tutorials</h1>
+        <div class="header-content">
+            <a href="index.html" class="logo">Mubashir Abbas, Ph.D.</a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="introduction.html">Introduction</a></li>
-                    <li><a href="tutorials.html">Tutorials</a></li>
-                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="index.html">Profile</a></li>
+                    <li><a href="tutorials.html" class="active">Tutorials</a></li>
                     <li><a href="blogs.html">Blogs</a></li>
-                    <li><a href="bioinformatics-news.html">Bioinformatics News</a></li>
+                    <li><a href="bioinformatics-news.html">News</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="tutorials">
-            <h2>Tutorials</h2>
-            <div class="tutorial-links">
-                <a href="tutorials/tutorial1.html" target="_blank">Perl Script to Split FASTA Files</a>
-                <a href="tutorials/tutorial2.html" target="_blank">Extract Matching Data from Two Files Using Python</a>
-                <a href="tutorials/tutorial3.html" target="_blank">Variant Annotation Pipeline Tutorial</a>
-                <a href="tutorials/tutorial4.html" target="_blank">Using BWA to align sequenced reads to reference genome</a>
-                <a href="tutorials/gc_content_tutorial.html" target="_blank">A simple python tool to calculate GC content directly</a>
-                <a href="tutorials/SRA-toolkit_tutorial.html" target="_blank">SRA-toolkit (Using SRA to download and process sequencing data from NCBI database)</a>
-                <a href="tutorials/Extract_variants.html" target="_blank">Extracting Variants Using SnpSift</a>
-                <a href="tutorials/convert_vcf_to_hapmap.html" target="_blank">Convert vcf to hapmap format</a>
-                <a href="tutorials/vcf_analysis_tutorial.html" target="_blank">Analysis of vcf file tutorial</a>
-                <a href="tutorials/bash-tutorial.html" target="_blank">Writing a bash script</a>
-                <a href="tutorials/population_genetics_tutorial.html" target="_blank">Population genetic analysis</a>
+        <div class="content-card">
+            <h1>Bioinformatics Tutorials</h1>
+            <p class="headline">Scripts, pipelines, and guides for plant genomics and data analysis.</p>
+
+            <div class="tutorials-list">
+                
+                <a href="tutorials/tutorial1.html" class="tutorial-link" target="_blank">
+                    <span class="tutorial-title">Perl Script to Split FASTA Files</span>
+                    <span class="tutorial-desc">A simple guide to efficiently splitting large genome files using Perl.</span>
+                </a>
+
+                <a href="tutorials/tutorial2.html" class="tutorial-link" target="_blank">
+                    <span class="tutorial-title">Extract Matching Data from Two Files Using Python</span>
+                    <span class="tutorial-desc">Learn how to cross-reference two large datasets and extract matches.</span>
+                </a>
+
+                <a href="tutorials/tutorial3.html" class="tutorial-link" target="_blank">
+                    <span class="tutorial-title">Variant Annotation Pipeline Tutorial</span>
+                    <span class="tutorial-desc">A step-by-step pipeline using SnpEff and ANNOVAR for variant annotation.</span>
+                </a>
+
+                <a href="tutorials/tutorial4.html" class="tutorial-link" target="_blank">
+                    <span class="tutorial-title">Using BWA to Align Sequenced Reads</span>
+                    <span class="tutorial-desc">Align raw sequencing reads to a reference genome using the Burrows-Wheeler Aligner.</span>
+                </a>
+
+                <a href="tutorials/gc_content_tutorial.html" class="tutorial-link" target="_blank">
+                    <span class="tutorial-title">Calculate GC Content with Python</span>
+                    <span class="tutorial-desc">A simple Python tool to calculate GC content directly from sequence data.</span>
+                </a>
+
+                <a href="tutorials/SRA-toolkit_tutorial.html" class="tutorial-link" target="_blank">
+                    <span class="tutorial-title">SRA-toolkit Guide</span>
+                    <span class="tutorial-desc">Using SRA to download and process sequencing data from the NCBI database.</span>
+                </a>
+
+                <a href="tutorials/Extract_variants.html" class="tutorial-link" target="_blank">
+                    <span class="tutorial-title">Extracting Variants Using SnpSift</span>
+                    <span class="tutorial-desc">Techniques for filtering and extracting specific variants from VCF files.</span>
+                </a>
+
+                <a href="tutorials/convert_vcf_to_hapmap.html" class="tutorial-link" target="_blank">
+                    <span class="tutorial-title">Convert VCF to HapMap Format</span>
+                    <span class="tutorial-desc">A guide on converting variant call files (VCF) to HapMap format for GWAS.</span>
+                </a>
+
+                <a href="tutorials/vcf_analysis_tutorial.html" class="tutorial-link" target="_blank">
+                    <span class="tutorial-title">Analysis of VCF File Tutorial</span>
+                    <span class="tutorial-desc">Comprehensive methods for analyzing variant call files and extracting statistics.</span>
+                </a>
+
+                <a href="tutorials/bash-tutorial.html" class="tutorial-link" target="_blank">
+                    <span class="tutorial-title">Writing a Bash Script</span>
+                    <span class="tutorial-desc">Introduction to writing Bash scripts for bioinformatics automation.</span>
+                </a>
+
+                <a href="tutorials/population_genetics_tutorial.html" class="tutorial-link" target="_blank">
+                    <span class="tutorial-title">Population Genetic Analysis</span>
+                    <span class="tutorial-desc">A walkthrough of population structure and diversity analysis techniques.</span>
+                </a>
+
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>© 2025 Mubashir3164 | <a href="mailto:mubashirabbas3164@yahoo.com">Contact Me</a></p>
+        <p>© 2025 Mubashir Abbas. All Rights Reserved. | <a href="mailto:mubashirabbas3164@yahoo.com">Contact Me</a></p>
     </footer>
+
 </body>
 </html>
