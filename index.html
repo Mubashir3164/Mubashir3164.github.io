@@ -3,157 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mubashir Abbas, Ph.D. - Plant Genomics & Bioinformatics</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Mubashir Abbas, Ph.D. - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        .profile-section { max-width: 900px; margin: 0 auto; padding: 20px; background: #fff; }
-        .profile-header { text-align: center; margin-bottom: 40px; border-bottom: 2px solid #eee; padding-bottom: 20px; }
-        .profile-header h2 { color: #333; margin-bottom: 5px; }
-        .contact-info { font-size: 0.9em; color: #666; margin-bottom: 20px; }
-        .cv-section { margin-bottom: 40px; }
-        .cv-section h3 { border-left: 4px solid #2c3e50; padding-left: 10px; color: #2c3e50; margin-bottom: 15px; }
-        .job-role { font-weight: bold; font-size: 1.1em; margin-top: 15px; }
-        .institution { font-style: italic; color: #555; }
-        .date { float: right; color: #888; font-size: 0.9em; }
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-        .publication-list { padding-left: 20px; }
-        .publication-list li { margin-bottom: 15px; line-height: 1.5; }
+        /* GLOBAL VARIABLES & RESET */
+        :root {
+            --primary-color: #0366d6;
+            --text-dark: #24292e;
+            --text-gray: #586069;
+            --bg-light: #f6f8fa;
+            --card-bg: #ffffff;
+            --border-color: #e1e4e8;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* HEADER & NAV */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-gray);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* MAIN LAYOUT */
+        main {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        h1 { margin: 0 0 10px 0; color: #111; letter-spacing: -0.5px; }
+        .headline { color: var(--text-gray); font-size: 1.1rem; margin-bottom: 30px; font-weight: 300; }
+
+        /* SECTIONS */
+        .section { margin-bottom: 50px; }
+        .section-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-gray);
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        /* RESEARCH HIGHLIGHTS */
+        .highlight-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Split 50% Text, 50% Image */
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: center;
+            border-bottom: 1px solid #f0f0f0; /* Divider between highlights */
+            padding-bottom: 40px;
+        }
         
-        /* Mobile adjustment for dates */
-        @media (max-width: 600px) { .date { float: none; display: block; } }
+        .highlight-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .highlight-text h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .highlight-subtitle {
+            display: block;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #111;
+            margin-bottom: 15px;
+        }
+
+        .highlight-figure {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            border-radius: 8px;
+        }
+
+        .highlight-figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .highlight-caption {
+            font-size: 0.8rem;
+            color: #777;
+            text-align: center;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* EDUCATION & EXPERIENCE ENTRIES */
+        .entry { margin-bottom: 25px; }
+        .entry-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+        .job-title { font-weight: 700; font-size: 1.05rem; color: #111; }
+        .date-badge { font-size: 0.85rem; color: var(--text-gray); background: #f1f3f5; padding: 2px 8px; border-radius: 4px; }
+        .institution { font-style: italic; color: #555; display: block; margin-bottom: 8px; }
+        .description ul { padding-left: 18px; margin-top: 5px; }
+        .description li { margin-bottom: 6px; font-size: 0.95rem; color: #333; }
+
+        /* SKILLS GRID */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .skill-category { background: #fafbfc; padding: 15px; border-radius: 6px; border: 1px solid #eee; }
+        .skill-category strong { display: block; margin-bottom: 5px; color: var(--primary-color); }
+
+        /* BUTTONS */
+        .btn-scholar {
+            display: inline-block;
+            background-color: #fff;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .btn-scholar:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+            background: #fff;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .highlight-item { grid-template-columns: 1fr; gap: 20px; } /* Stack on mobile */
+            .entry-header { flex-direction: column; }
+            .header-content { flex-direction: column; gap: 15px; }
+        }
     </style>
 </head>
 <body>
+
     <header>
-        <div class="header-container">
-            <h1>Mubashir Abbas, Ph.D.</h1>
-            <p>Plant Genomics | Computational Biology | Multi-Omics Integration</p>
+        <div class="header-content">
+            <a href="index.html" class="logo">Mubashir Abbas, Ph.D.</a>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">My Profile</a></li>
+                    <li><a href="index.html" class="active">Profile</a></li>
                     <li><a href="tutorials.html">Tutorials</a></li>
                     <li><a href="blogs.html">Blogs</a></li>
-                    <li><a href="bioinformatics-news.html">Bioinformatics News</a></li>
+                    <li><a href="bioinformatics-news.html">News</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <div class="profile-section">
+        <div class="profile-card">
             
-            <div class="cv-section">
-                <h3>Professional Summary</h3>
-                <p>Highly skilled plant genomics and computational biology researcher with extensive experience in multi-omics integration, genome-wide association studies (GWAS), and bioinformatics pipeline development. Demonstrated expertise in uncovering genetic mechanisms of abiotic and biotic stress tolerance in plants through advanced genomic and computational approaches. Proven record of high-impact publications and collaborative research in plant biotechnology and stress physiology.</p>
-                <div class="contact-info">
-                    📧 <a href="mailto:mubashirabbas3164@yahoo.com">mubashirabbas3164@yahoo.com</a> | 
-                    🌐 <a href="https://Mubashir3164.github.io">Mubashir3164.github.io</a> | 
-                    📍 Beijing, P.R. China
+            <h1>Mubashir Abbas, Ph.D.</h1>
+            <p class="headline">Plant Genomics | Computational Biology | Multi-Omics Integration</p>
+            
+            <div class="section">
+                <div class="section-title">Professional Summary</div>
+                <p>
+                    Highly skilled plant genomics and computational biology researcher with extensive experience in multi-omics integration, genome-wide association studies (GWAS), and bioinformatics pipeline development. Demonstrated expertise in uncovering genetic mechanisms of abiotic and biotic stress tolerance in plants through advanced genomic and computational approaches.
+                </p>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Research Highlights</div>
+
+                <div class="highlight-item">
+                    <div class="highlight-text">
+                        <h3>bHLH Genes in Cotton</h3>
+                        <span class="highlight-subtitle">Genetic Diversity & Functional Significance</span>
+                        <p>
+                            We performed a comprehensive genome-wide analysis of the Basic Helix-Loop-Helix (bHLH) transcription factor family in cotton. This study revealed key candidate genes involved in fiber development and elucidated their evolutionary divergence and functional roles.
+                        </p>
+                        <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                            <strong>Methods:</strong> Genome-wide Identification, Phylogenetic Analysis<br>
+                            <strong>Journal:</strong> <em>Industrial Crops and Products</em>, 2024
+                        </p>
+                    </div>
+                    <div class="highlight-figure">
+                        <img src="images/bHLH_genes_cotton_fiber.jpg" alt="bHLH Genes Evolutionary Analysis">
+                        <div class="highlight-caption">Fig 1. Analysis of bHLH genes in cotton fiber development.</div>
+                    </div>
+                </div>
+                </div>
+
+            <div class="section">
+                <div class="section-title">Education</div>
+                <div class="entry">
+                    <div class="entry-header">
+                        <span class="job-title">Ph.D. in Biochemistry and Molecular Biology</span>
+                        <span class="date-badge">Dec 2023</span>
+                    </div>
+                    <span class="institution">Chinese Academy of Agricultural Sciences, Beijing, China</span>
                 </div>
             </div>
 
-            <div class="cv-section">
-                <h3>Education</h3>
-                <div>
-                    <div class="job-role">Ph.D. in Biochemistry and Molecular Biology <span class="date">Dec 2023</span></div>
-                    <div class="institution">Chinese Academy of Agricultural Sciences, Beijing, China</div>
-                    <p><em>Dissertation:</em> "GWAS to Understand the Genetic Basis of Root System Architecture in Cotton under Salt and Drought Stress Conditions"</p>
-                </div>
-                <br>
-                <div>
-                    <div class="job-role">M.Sc. in Agricultural Biotechnology <span class="date">Dec 2018</span></div>
-                    <div class="institution">University of Agriculture, Faisalabad, Pakistan</div>
-                    <p><em>Thesis:</em> "DNA Barcoding of Shisham (Dalbergia sissoo) Population of Lower Punjab, Pakistan"</p>
-                </div>
-            </div>
-
-            <div class="cv-section">
-                <h3>Research Experience</h3>
+            <div class="section">
+                <div class="section-title">Research Experience</div>
                 
-                <div>
-                    <div class="job-role">Postdoctoral Research Fellow <span class="date">Jan 2024 – Nov 2025</span></div>
-                    <div class="institution">Cotton Research Institute, CAAS, Anyang, Henan, China</div>
-                    <ul>
-                        <li>Integrated population genetics, transcriptomics, and transposable element analysis to study gossypol biosynthesis and defense against Verticillium wilt in cotton.</li>
-                        <li>Investigated genetic and regulatory roles of microRNAs in gossypol gland formation in cotton seeds.</li>
-                        <li>Developed computational pipelines for multi-omics data integration and analysis.</li>
-                        <li>Assisted the advisor in supervision of graduate students.</li>
-                    </ul>
+                <div class="entry">
+                    <div class="entry-header">
+                        <span class="job-title">Postdoctoral Research Fellow</span>
+                        <span class="date-badge">Jan 2024 – Nov 2025</span>
+                    </div>
+                    <span class="institution">Cotton Research Institute, CAAS, Anyang, China</span>
+                    <div class="description">
+                        <ul>
+                            <li>Integrated population genetics, transcriptomics, and transposable element analysis to study gossypol biosynthesis.</li>
+                            <li>Investigated regulatory roles of microRNAs in gossypol gland formation in cotton seeds.</li>
+                            <li>Developed computational pipelines for multi-omics data integration.</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div>
-                    <div class="job-role">Graduate Research Assistant <span class="date">Mar 2019 – Dec 2023</span></div>
-                    <div class="institution">Biotechnology Research Institute, CAAS, Beijing, China</div>
-                    <ul>
-                        <li>Conducted GWAS to identify genetic loci associated with root system architecture under salt and drought stress.</li>
-                        <li>Developed bioinformatics pipelines for NGS data analysis and variant calling.</li>
-                        <li>Collaborated on projects integrating phenomics, genomics, and transcriptomics for stress adaptation studies.</li>
-                        <li>Assembled mitochondrial genome of CMS lines of cotton.</li>
-                    </ul>
+                <div class="entry">
+                    <div class="entry-header">
+                        <span class="job-title">Graduate Research Assistant</span>
+                        <span class="date-badge">Mar 2019 – Dec 2023</span>
+                    </div>
+                    <span class="institution">Biotechnology Research Institute, CAAS, Beijing, China</span>
+                    <div class="description">
+                        <ul>
+                            <li>Conducted GWAS to identify genetic loci associated with root system architecture under stress.</li>
+                            <li>Collaborated on projects integrating phenomics, genomics, and transcriptomics.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="cv-section">
-                <h3>Technical Skills</h3>
+            <div class="section">
+                <div class="section-title">Technical Skills</div>
                 <div class="skills-grid">
-                    <div>
-                        <strong>Programming:</strong><br> Bash/Linux, R, Python, Perl, JavaScript
+                    <div class="skill-category">
+                        <strong>Programming</strong>
+                        Bash, R, Python, Perl, JavaScript
                     </div>
-                    <div>
-                        <strong>Genome Assembly:</strong><br> Canu, NextDenovo, Flye, SPAdes, Unicycler, Pilon, Bandage
+                    <div class="skill-category">
+                        <strong>Genomics</strong>
+                        GWAS, Variant Calling (GATK), Assembly
                     </div>
-                    <div>
-                        <strong>Variant Analysis:</strong><br> GATK, Bcftools, Samtools, Annovar, SnpEff, Ensembl VEP
-                    </div>
-                    <div>
-                        <strong>NGS Analysis:</strong><br> BWA, Bowtie2, STAR, HISAT2, RNA-seq, DNA-seq
-                    </div>
-                    <div>
-                        <strong>GWAS & Pop. Genetics:</strong><br> EMMAX, PLINK, TASSEL, GAPIT, XPCLR, FST analysis
-                    </div>
-                    <div>
-                        <strong>Machine Learning:</strong><br> PCA, K-means clustering, Linear Discriminant Analysis
+                    <div class="skill-category">
+                        <strong>NGS Analysis</strong>
+                        RNA-seq, DNA-seq, HISAT2, Bowtie2
                     </div>
                 </div>
             </div>
 
-            <div class="cv-section">
-                <h3>Publications</h3>
-                <ol class="publication-list">
-                    <li><strong>Abbas M</strong>, Abid M.A, Meng Z, Abbas M, Wang P, Lu C, Askari M, Akram U, Wei Y, Wang Y, Guo S, Liang C, Zhang R. Integrating advancements in root phenotyping and genome-wide association studies to open the root genetics gateway. <em>Physiologia Plantarum</em>, 2022.</li>
-                    <li><strong>Abbas M</strong>, Zang Youyi, Chao Lu, Muhammad Aamir Khan, Muhammad Aneeq Ur Rahman, Muhammad Jawad Umer, Chengzhen Liang, Zhigang Meng, Peilin Wang, Muhammad Askari, Yunxiao Wei, Rui Zhang. Insights into genetic diversity and functional significance of the bHLH genes in cotton fiber development. <em>Industrial Crops and Products</em>, 2024.</li>
-                    <li><strong>Abbas, M.</strong>, Umer, M.J., Abro, A.A., Menghan, Z., Lu, C., Liu, Q., Wang, H., Yang, M., Liu, Y., Wenjuan, H. and Khan, M.A. A short-chain dehydrogenase/reductase gene confers resistance to Verticillium wilt in cotton and reveals adaptive selection during domestication. <em>Plant Stress</em>, 2025.</li>
-                    <li>Qiankun Liu, Pengtao Li, Muhammad Jawad Umer, <strong>Abbas M</strong>, Mengying Yang, Heng Wang, Qiankun Liu, Muhammad Aamir Khan, Xiaoyan Cai, Zhongli Zhou, Zhang R, Fang Liu. Identification of EXPA4 as a key gene in cotton salt stress adaptation through transcriptomic and coexpression network analysis of root tip protoplasts. <em>BMC Plant Biology</em>.</li>
-                    <li>Aamir Ali Abro †, <strong>Abbas M †</strong>, Qiankun Liu, Zheng Jie, Yanchao Xu, Yuqing Hou, Zhongli Zhou, Fang Liu, Xiaoyan Cai. Genetic insights into cold tolerance in cotton: GWAS identified GhPRL1 gene responsible for cold tolerance in cotton at seedling stage. <em>Industrial Crops and Products</em>, 2025. (Co-first author)</li>
-                    <li>Peilin Wang†, <strong>Abbas M †</strong>, Lili Zhou, Muhammad Jawad Umer, Hongmei Cheng and Huiming Guo*. Advances in Genome Sequencing and Artificially Induced Mutation Provides New Avenues for Cotton Breeding. <em>Frontiers in Plant Science</em>. (Co-first author)</li>
-                    <li>Peilin Wang †, Yuanchun Pu †, <strong>Abbas M †</strong>, Muhammad A. Khan, Jiangling Xu, Yejun Yang, Ting Zhou, Kai Zheng, Quanjia Chen, Sun Guoqing. Genome-wide identification and analyses of cotton high-affinity nitrate transporter 2 (NRT2) family genes and their responses to stress. <em>Frontiers in Plant Science</em> (Co-first author).</li>
-                    <li>Aamir Ali Abro1†, Javaria Tabusam2†, <strong>Mubashir Abbas1†</strong>, Shiguftah Khalid1, Qiankun Liu1, Kumail Abbas3, Zheng Jie1, Yanchao Xu1, Yuqing Hou1, Zhongli Zhou1, Xiaoyan Cai1*, Fang Liu 1, 4*. Multi-Omics Insights into Antioxidant Defense, Phenylpropanoid, and Flavonoid Pathways Governing Cold Stress Tolerance in Cotton (Gossypium hirsutum). <em>Plant Physiology and Biochemistry</em> (under review).</li>
-                    <li>Aamir Ali Abro, Muhammad Qasim, <strong>Abbas M</strong>, Noor Muhammad, Ijaz Ali, Shiguftah Khalid, Junaid Ahmed, Muhammad Waqas, Sezai Ercisli, Rashid Iqbal & Fang Liu. Integrating physiological and molecular insights in cotton under cold stress conditions. <em>Genetic Resources and Crop Evolution</em>.</li>
-                    <li>Muhammad Aamir Khan, Saeed Ahmad, <strong>Abbas M</strong>, Ayaz khan, Yunxiao Wei, Rui Zhang. Impacts of Climate Change on Cotton Production and Advancements in Genomic Approaches for Stress Resilience Enhancement. <em>Journal of Cotton Research</em>.</li>
-                    <li>Muhammad Ali Abid, Qi Zhou, <strong>Abbas M</strong>, Zhigang Meng, Yuan Wang, Yunxiao Wei, Sandui Guo, Zhang Rui, Chengzhen Liang. Natural variation in Beauty Mark is associated with UV-based geographical adaptation in Gossypium species. <em>BMC Biology</em>, 2023.</li>
-                    <li>Yulu Ye, Peilin Wang, Man Zhang, <strong>Abbas M</strong>, Jiaxin Zhang, Chengzhen Liang, Yuan Wang, Yunxiao Wei, Zhigang Meng and Rui Zhang. High-throughput UAV-based phenotyping reveals the genetic basis of plant height in upland cotton. <em>The Plant Journal</em>.</li>
-                    <li>Aamir Ali Abro, Muhammad Qasim, Muhammad Usama Younas, Ijaz Ali, <strong>Abbas M</strong>, Noor Muhammad, Shiguftah Khalid, Junaid Ahmed, Umbreen Bibi, Muhammad Waqas, Sezai Ercisli, Fahad Al-Asmari, Temoor Ahmed, Rashid Iqbal & Fang Liu. Impact of elevated temperatures on the genetic and morpho-physiological traits of cotton genotypes cultivation. <em>Genetic Resources and Crop Evolution</em>.</li>
-                    <li>Manzar Abbas, Yan K, Li J, Zafar S, Hasnain Z, Aslam N, Iqbal N, Hussain SS, Usman M, <strong>Abbas M</strong>, Tahir M, Abbas S, Abbas SK, Qiulan H, Zhao X, El-Sappah AH. Agri-Nanotechnology and Tree Nanobionics: Augmentation in Crop Yield, Biosafety, and Biomass Accumulation. <em>Front Bioeng Biotech</em>, 2022.</li>
-                    <li>Manzar Abbas, Li Y, Elbaiomy RG, Yan K, Ragauskas AJ, Yadav V, Soaud SA, Islam MM, Saleem N, Noor Z, Zafar S, Hussain SS, <strong>Abbas M</strong>, Abbas S, Li J, El-Sappah AH. Genome- Wide Analysis and Expression Profiling of SlHsp70 Gene Family in Solanum lycopersicum Revealed Higher Expression of SlHsp70-11 in Roots under Cd2+ Stress. <em>Frontiers in Biosciences</em>, 2022.</li>
-                    <li>Akram U, Song Y, Liang C, Abid MA, Askari M, Myat AA, <strong>Abbas M</strong>, Malik W, Ali Z, Guo S, Zhang R, Meng Z. Genome-Wide Characterization and Expression Analysis of NHX Gene Family under Salinity Stress in Gossypium barbadense and Its Comparison with Gossypium hirsutum. <em>Genes</em>, 2020.</li>
-                    <li>Myat AA, Zhou Y, Gao Y, Zhao X, Liang C, Abid MA, Wang P, Akram U, <strong>Abbas M</strong>, Askari M, Guo S, Zhang R, Meng Z. Overexpression of GhKTI12 Enhances Seed Yield and Biomass Production in Nicotiana Tabacum. <em>Genes</em>, 2022.</li>
-                    <li>Lu C, Wei Y, Meng Z, Liu Y, Ali AM, Liu Q, <strong>Abbas M</strong>, Wang Y, Liang C, Wang Y, Zhang R. Overexpression of LT, an Oncoprotein Derived from the Polyomavirus SV40, Promotes Somatic Embryogenesis in Cotton. <em>Genes</em>, 2022.</li>
-                    <li>Aamir Ali Abro, Cong Sun, <strong>Abbas M</strong>, Qiankun Liu, Zheng Jie, Yanchao Xu, Yuqing Hou, Zhongli Zhou, Rashid Iqbal, Fang Liu, Xiaoyan Cai. Comprehensive profling of Bcl-2-associated athanogene (BAG) genes and their genetic potential role under cold stress in Cotton. <em>Functional & Integrative Genomics</em>, 2025.</li>
-                    <li>Pu Yuanchun, Wang Peilin, <strong>Abbas M</strong>, Iqbal Asif, Dong Qiang, Luo Tong, Wang Qianqian, Cao Fei and Song Meizhen. Insights from model plants to improve cotton’s use of nitrogen and phosphorus. <em>Journal of Cotton Research</em>.</li>
-                    <li>Chengzhen Liang, Zang Youyi, Meng Zhigang, Wang Yuan, <strong>Abbas M</strong>, He Haiyan, Zhou Qi, Wei Yunxiao, Rui Zhang, Guo Sandui. Identification of Target Traits and Genetic Stability of Transgenic Cotton GGK2. <em>Scientia Agricultura Sinica</em>, 2023.</li>
-                    <li>Wang, P., Zhang, M., Wei, Y., Kong, J., Ye, Y., Meng, Z., Zhu, T., Zhang, X., Li, R., <strong>Abbas, M.</strong>, Wang, Y., Guo, S., Wu, Z., Zhang, R. A cotton mitochondrial CMS gene confers both pollen sterility and cold tolerance via ROS regulation. <em>PNAS</em> (under review), 2025.</li>
-                    <li>Liu, Q., <strong>Abbas, M.</strong>, Umer, M. J., Li, Y., Zhang, A., Zhao, Y., Du, X., Lu, Q., Abro, A. A., Cai, X., Zhou, Z., Liu, Y., Wei, Y., Zhang, B., Li, P., Liu, F., Peng, R. The GhERF17–GhAKR1 Regulatory Module Integrates Ethylene Signaling and Antioxidant Defense to Enhance Cotton Salt Tolerance. <em>The Crop Journal</em> (under review), 2025 (co-first author).</li>
-                    <li>Liu, Q., Li, P., Xu, Z., Li, Y., <strong>Abbas, M.</strong>, Zhu, X., Zheng, J., Zhang, A., Zhang, X., Liu, Y., Lu, Q., Wei, Y., Wang, T., Cai, X., Zhou, Z., Xu, Y., Zhang, Y., Liu, F., Jin, S., & Peng, R. (2025). Single-cell multi-omics reveals the spatiotemporal response of cotton roots to salt stress. <em>Nature Genetics</em>, (Under review).</li>
-                </ol>
+            <div class="section">
+                <div class="section-title">Publications</div>
+                <p style="margin-bottom: 20px;">
+                    I have published extensively in high-impact journals including <em>Physiologia Plantarum</em>, <em>Industrial Crops and Products</em>, and <em>BMC Plant Biology</em>. For a complete and up-to-date list of my citations and research metrics, please visit my Google Scholar profile.
+                </p>
+                <a href="https://scholar.google.com/citations?user=atvrp9wAAAAJ" target="_blank" class="btn-scholar">
+                    View Google Scholar Profile ➞
+                </a>
             </div>
 
         </div>
     </main>
 
     <footer>
-        <p>© 2025 Mubashir Abbas | <a href="mailto:mubashirabbas3164@yahoo.com">Contact Me</a></p>
+        <div style="margin-bottom: 15px;">
+            <a href="mailto:mubashirabbas3164@yahoo.com" style="color:var(--primary-color); text-decoration:none; font-weight:600;">mubashirabbas3164@yahoo.com</a>
+            <span style="margin: 0 10px; color: #ccc;">|</span>
+            <span>Beijing, P.R. China</span>
+        </div>
+        <div style="opacity: 0.7;">© 2025 Mubashir Abbas. All Rights Reserved.</div>
     </footer>
+
 </body>
 </html>
